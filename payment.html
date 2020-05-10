@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <title>loop</title>
 
     <link rel="icon" href="img/loop-removebg-preview.png">
@@ -56,8 +56,8 @@
                     </a>
                 </li>
                 <li class="logged-in" style="display : none" ;>
-                    <a href="#" class="modal-trigger tooltipped" data-target="modal-create" id="cart" data-position="bottom"
-                        data-tooltip="Cart">
+                    <a href="#" class="modal-trigger tooltipped" data-target="modal-create" id="cart"
+                        data-position="bottom" data-tooltip="Cart">
                         <i class="large material-icons">shopping_cart</i>
                     </a>
                 </li>
@@ -65,7 +65,8 @@
                     <a href="#" class="modal-trigger btn white black-text" data-target="modal-login">Login</a>
                 </li>
                 <li class="logged-out" style="display : none" ;>
-                    <a style="border: 1px solid white;" href="#" class="modal-trigger btn" data-target="modal-signup">Sign
+                    <a style="border: 1px solid white;" href="#" class="modal-trigger btn"
+                        data-target="modal-signup">Sign
                         up</a>
                 </li>
                 </span>
@@ -379,9 +380,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-                var toolTip = document.querySelectorAll('.tooltipped');
-                var instances = M.Tooltip.init(toolTip);
-            });
+            var toolTip = document.querySelectorAll('.tooltipped');
+            var instances = M.Tooltip.init(toolTip);
+        });
     </script>
     <script src="js/auth.js"></script>
     <script src="js/payment.js"></script>
