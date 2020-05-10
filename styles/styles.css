@@ -140,12 +140,12 @@ body {
   border-radius: 15px;
   margin: 150px auto 0px;
 }
-#mobiles{
+#mobiles {
   min-height: 100vh;
   width: 99%;
   margin: auto;
 }
-#accessories{
+#accessories {
   min-height: 100vh;
 }
 /* Create two equal columns that floats next to each other */
@@ -170,7 +170,7 @@ body {
   margin: auto;
   overflow-y: visible;
 }
-.modal-footer{
+.modal-footer {
   background-color: #f5eee2 !important;
   border-radius: 10px !important;
 }
@@ -216,20 +216,20 @@ textarea:-webkit-autofill:active {
 }
 /* Accounts styles */
 .account-profile,
-.account-order{
+.account-order {
   background: #e6e6e6;
   border-radius: 10px;
   margin: 39px;
   height: 300px;
 }
-.account-no-orders-heading{
+.account-no-orders-heading {
   display: flex;
   position: absolute;
   top: 50%;
   left: 67%;
   transform: translate(-50%, -50%);
 }
-.profile-pic{
+.profile-pic {
   width: 100px;
   border-radius: 200px;
 }
@@ -254,10 +254,10 @@ textarea:-webkit-autofill:active {
 .mobilePhonesWrapper,
 .accessoriesWrapper {
   display: grid;
- grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
- grid-gap: 1rem;
- grid-auto-flow: dense;
- padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  grid-auto-flow: dense;
+  padding: 1rem;
 }
 
 .card {
@@ -303,6 +303,9 @@ textarea:-webkit-autofill:active {
 }
 footer {
   background: #3c303e !important;
+}
+footer a:hover {
+  color: #ffee58 !important;
 }
 .fa {
   /* margin: 0px 7px; */

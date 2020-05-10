@@ -211,7 +211,7 @@ const footerAddress = (data) => {
     const footerContent = doc.data();
     let addressHtml = "";
     const address = `
-    <p><i class="fa fa-map-marker"></i> ${footerContent.address}</p> 
+    <a href="https://goo.gl/maps/ZVHQ8i8ViySepJ6t8" class="white-text" target="_blank"><i class="fa fa-map-marker"></i> ${footerContent.address}</a>
     `;
     addressHtml += address;
 
