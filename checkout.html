@@ -38,40 +38,41 @@
         <div class="nav-links">
             <a href="index.html">Home</a>
         </div>
-    <div class="user">
-        <ul class="guides" style="border: none;">
-            <li class="admin" style="display : none" ;>
-                <a href="dashboard.html" class="modal-trigger" data-target="">
-                    <i class="large material-icons">assessment</i>
-                </a>
-            </li>
-            <li class="logged-in" style="display : none" ;>
-                <a href="#" class="modal-trigger tooltipped" data-target="modal-account" data-position="bottom"
-                    data-tooltip="Account">
-                    <i class="large material-icons">account_box</i>
-                </a>
-            </li>
-            <li class="logged-in" style="display : none" ;>
-                <a href="#" class="tooltipped" id="logout" data-position="bottom" data-tooltip="Logout">
-                    <i class="large material-icons">logout</i>
-                </a>
-            </li>
-            <li class="logged-in" style="display : none" ;>
-                <a href="#" class="modal-trigger tooltipped" data-target="modal-create" id="cart" data-position="bottom"
-                    data-tooltip="Cart">
-                    <i class="large material-icons">shopping_cart</i>
-                </a>
-            </li>
-            <li class="logged-out" style="display : none" ;>
-                <a href="#" class="modal-trigger btn white black-text" data-target="modal-login">Login</a>
-            </li>
-            <li class="logged-out" style="display : none" ;>
-                <a style="border: 1px solid white;" href="#" class="modal-trigger btn" data-target="modal-signup">Sign
-                    up</a>
-            </li>
-            </span>
-        </ul>
-    </div>
+        <div class="user">
+            <ul class="guides" style="border: none;">
+                <li class="admin" style="display : none" ;>
+                    <a href="dashboard.html" class="modal-trigger" data-target="">
+                        <i class="large material-icons">assessment</i>
+                    </a>
+                </li>
+                <li class="logged-in" style="display : none" ;>
+                    <a href="#" class="modal-trigger tooltipped" data-target="modal-account" data-position="bottom"
+                        data-tooltip="Account">
+                        <i class="large material-icons">account_box</i>
+                    </a>
+                </li>
+                <li class="logged-in" style="display : none" ;>
+                    <a href="#" class="tooltipped" id="logout" data-position="bottom" data-tooltip="Logout">
+                        <i class="large material-icons">logout</i>
+                    </a>
+                </li>
+                <li class="logged-in" style="display : none" ;>
+                    <a href="#" class="modal-trigger tooltipped" data-target="modal-create" id="cart"
+                        data-position="bottom" data-tooltip="Cart">
+                        <i class="large material-icons">shopping_cart</i>
+                    </a>
+                </li>
+                <li class="logged-out" style="display : none" ;>
+                    <a href="#" class="modal-trigger btn white black-text" data-target="modal-login">Login</a>
+                </li>
+                <li class="logged-out" style="display : none" ;>
+                    <a style="border: 1px solid white;" href="#" class="modal-trigger btn"
+                        data-target="modal-signup">Sign
+                        up</a>
+                </li>
+                </span>
+            </ul>
+        </div>
     </nav>
 
     <main id="checkout-main">
@@ -278,9 +279,8 @@
             <div class="row">
                 <div class="col l6 s12">
                     <h5 class="white-text">Reach Us</h5>
-                    <p class="grey-text text-lighten-4">Hasmukh Nagar, D/5 21 Tagore Rd, Santacruz (west) <i
-                            class="fa fa-map-marker"></i> <br> Phone - 02256910545 <i class="fa fa-phone"></i> </p>
-
+                    <p class="grey-text text-lighten-4 footer-address"></p>
+                    <p class="footer-phone"></p>
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Reac Us</h5>
@@ -339,9 +339,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-                var toolTip = document.querySelectorAll('.tooltipped');
-                var instances = M.Tooltip.init(toolTip);
-            });
+            var toolTip = document.querySelectorAll('.tooltipped');
+            var instances = M.Tooltip.init(toolTip);
+        });
     </script>
     <script src="js/auth.js"></script>
     <script src="js/checkout.js"></script>

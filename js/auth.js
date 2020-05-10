@@ -46,7 +46,9 @@ function removeItem(name, useruid, price) {
   var row = del.parentNode.parentNode;
   row.parentNode.removeChild(row);
   totalPriceAfterRemoveITem -= price;
-  document.querySelector(".total-price-count").innerHTML = totalPriceAfterRemoveITem;
+  document.querySelector(
+    ".total-price-count"
+  ).innerHTML = totalPriceAfterRemoveITem;
 }
 
 //change ui on auth
@@ -198,6 +200,30 @@ loginForm.addEventListener("submit", (e) => {
       loginForm.querySelector(".signin-error").innerHTML = err.message;
     });
 });
+
+// footer content from database
+db.collection("footerContent").onSnapshot((snapshot) => {
+  footerAddress(snapshot.docs);
+});
+
+const footerAddress = (data) => {
+  data.forEach((doc) => {
+    const footerContent = doc.data();
+    let addressHtml = "";
+    const address = `
+    <p><i class="fa fa-map-marker"></i> ${footerContent.address}</p> 
+    `;
+    addressHtml += address;
+
+    let phoneHtml = "";
+    const phone = `
+    <p><i class="fa fa-phone"></i> Phone - ${footerContent.phone}</p>
+    `;
+    phoneHtml += phone;
+    document.querySelector(".footer-address").innerHTML = addressHtml;
+    document.querySelector(".footer-phone").innerHTML = phoneHtml;
+  });
+};
 
 // --------------------setup materialize component for modals--------------------
 document.addEventListener("DOMContentLoaded", function () {
