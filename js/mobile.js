@@ -91,9 +91,9 @@ mobileForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   let mobileSearch = document.querySelector(".search-mobile").value;
-
+  let searchToLowerCase = mobileSearch.toLowerCase();
   db.collection("mobilePhones")
-    .where("brand", "==", `${mobileSearch}`)
+    .where("brand", "==", `${searchToLowerCase}`)
     .onSnapshot((snapshot) => {
       fetchMobilePhones(snapshot.docs);
     });
