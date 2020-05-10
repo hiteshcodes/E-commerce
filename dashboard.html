@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loop</title>
+
+    <link rel="icon" href="img/loop-removebg-preview.png" />
+
+    <link type="text/css" rel="stylesheet" href="styles/styles.css" />
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles/materialize.css" />
+
+    <!-- Poppins fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700,900&display=swap" rel="stylesheet" />
+
+    <!-- material-icons -->
+    <link rel="stylesheet" href="styles/materializecssicons.css">
+
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+
+    <nav id="nav">
+        <!-- <div class="logo">
+            <a href="index.html"><img src="img/loop-removebg-preview.png" alt="logo">
+            </a>
+            <a href="index.html">
+                <p class="loop">loop</p>
+            </a>
+        </div> -->
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="mobilePhones.html">Mobiles</a>
+            <a href="accessories.html">Accessories</a>
+        </div>
+        <div class="user">
+            <ul class="guides" style="border: none;">
+                <li class="admin" style="display : none" ;>
+                    <a href="dashboard.html" class="modal-trigger" data-target="">
+                        <i class="large material-icons">assessment</i>
+                    </a>
+                </li>
+                <li class="logged-in" style="display : none" ;>
+                    <a href="#" class="modal-trigger tooltipped" data-target="modal-account" data-position="bottom"
+                        data-tooltip="Account">
+                        <i class="large material-icons">account_box</i>
+                    </a>
+                </li>
+                <li class="logged-in" style="display : none" ;>
+                    <a href="#" class="tooltipped" id="logout" data-position="bottom" data-tooltip="Logout">
+                        <i class="large material-icons">logout</i>
+                    </a>
+                </li>
+                <li class="logged-in" style="display : none" ;>
+                    <a href="#" class="modal-trigger tooltipped" data-target="modal-create" id="cart"
+                        data-position="bottom" data-tooltip="Cart">
+                        <i class="large material-icons">shopping_cart</i>
+                    </a>
+                </li>
+                <li class="logged-out" style="display : none" ;>
+                    <a href="#" class="modal-trigger btn white black-text" data-target="modal-login">Login</a>
+                </li>
+                <li class="logged-out" style="display : none" ;>
+                    <a style="border: 1px solid white;" href="#" class="modal-trigger btn"
+                        data-target="modal-signup">Sign up</a>
+                </li>
+                </span>
+            </ul>
+        </div>
+    </nav>  
+        <a href="#" data-target="slide-out" class="sidenav-trigger">Action<i class="material-icons">menu</i></a>
+        <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="images/office.jpg">
+      </div>
+      <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
+      <a href="#name"><span class="white-text name">John Doe</span></a>
+      <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><a href="#!">Second Link</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>
+  
+    <main id="main">
+        <!-- SIGN UP MODAL -->
+        <div id="modal-signup" class="modal">
+            <div class="modal-content">
+                <h4 class="modal-heading">Sign up</h4><br />
+                <form id="signup-form">
+                    <div class="input-field">
+                        <input type="email" id="signup-email" requi />
+                        <label for="signup-email">Email address</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="signup-password" requi />
+                        <label for="signup-password">Choose password</label>
+                    </div>
+                    <button class="btn z-depth-0">Sign up</button>
+                    <br>
+                    <p class="signup-error center-align errors"></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- LOGIN MODAL -->
+        <div id="modal-login" class="modal">
+            <div class="modal-content">
+                <h4 class="modal-heading">Login</h4><br />
+                <form id="login-form">
+                    <div class="input-field">
+                        <input type="email" id="login-email" requi />
+                        <label for="login-email">Email address</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="login-password" requi />
+                        <label for="login-password">Your password</label>
+                    </div>
+                    <button class="btn z-depth-0">Login</button>
+                    <br>
+                    <p class="signin-error center-align errors"></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- ACCOUNT MODAL -->
+        <div id="modal-account" class="modal">
+            <div class="modal-content center-align">
+                <h4 class="modal-heading">Account</h4>
+                <div class="row">
+                    <div class="col l12">
+                        <h5>Profile</h5> <br>
+                        <hr style="margin: 10px 0px;">
+                        <div class="account-details">
+
+                        </div>
+                    </div>
+                    <a href="account.html">Manage your account</a>
+                    <!-- <div class="col l6">
+                        <table>
+                            <th>
+                                <tr>
+                                    <h5>Your Orders</h5>
+                                </tr>
+                            </th>
+                            <tbody class="orders-table">
+
+                            </tbody>
+                        </table>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart MODAL -->
+        <div id="modal-create" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <div class="show-cart" style="display: none">
+                    <h6 class="modal-heading">Your Shopping Cart</h6><br />
+                    <table class="centered">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Name</th>
+                                <th>Remove</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody class="cartWrapper">
+
+                        </tbody>
+                        <tr class="bottom-table">
+                            <td>
+
+                            </td>
+                            <td style="text-align: center;">
+                                <h6>Total Price : </h6>
+                            </td>
+                            <td>
+                                <h6 class="total-price-count"></h6>
+                            </td>
+                            <td>
+                                <a href="checkout.html" class="btn-checkout btn">Checkout</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="hide-cart center" style="display : none">
+                    <h5>Your Shopping Cart is Empty</h5>
+                    <img src="img/empty-cart.jpg" alt="empty-cart"> <br>
+                    <a href="index.html" class="btn">Shop Now</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col l12 m12">
+                <h5>Add Mobile Phones</h5>
+                <form>
+                    <label for="">name: </label>
+                    <input type="text" id="mobile-name" /> 
+                    <label for="">color: </label>
+                    <input type="text" id="mobile-color" /> 
+                    <label for="">Price: </label>
+                    <input type="text" id="mobile-Price" /> 
+                    <label for="">image: </label>
+                    <input type="text" id="mobile-image" /> 
+                    <label for="">price: </label>
+                    <input type="text" id="mobile-price" /> 
+                    <label for="">storage: </label>
+                    <input type="text" id="mobile-storage" /> 
+                    <label for="">processor: </label>
+                    <input type="text" id="mobile-processor" /> 
+                    <label for="">camera: </label>
+                    <input type="text" id="mobile-camera" /> 
+                    <label for="">battery: </label>
+                    <input type="text" id="mobile-battery" /> 
+                
+                    <h6 class="error"></h6>
+                    <button class="btn teal darken-4" id="submit">Submit</button>
+                    <button type="reset" onclick="reset()" class="btn teal darken-4">Reset</button>
+                </form>
+            </div>
+            <div class="col l12 m12">
+                <table class="table centered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">color</th>
+                            <th scope="col">image</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">storage</th>
+                            <th scope="col">processor</th>
+                            <th scope="col">camera</th>
+                            <th scope="col">battery</th>
+                            <th scope="col">Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody class="mobiles-table-content"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- firebase configs -->
+    <!-- The core Firebase JS SDK is always requi  and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-functions.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCqv05eagwoCTjHiUVWLmTzHl-dDh2X5hI",
+            authDomain: "ecommerce-f108f.firebaseapp.com",
+            databaseURL: "https://ecommerce-f108f.firebaseio.com",
+            projectId: "ecommerce-f108f",
+            storageBucket: "ecommerce-f108f.appspot.com",
+            messagingSenderId: "351954540442",
+            appId: "1:351954540442:web:2f34e401f4a9bb70c34c23",
+            measurementId: "G-DZDK7934TE",
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        //make firebase auth and reference
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        const functions = firebase.functions();
+
+      // db.settings({ timestampsInSnapshots: true });
+    </script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var elems = document.querySelectorAll(".sidenav");
+            var instances = M.Sidenav.init(elems);
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            var toolTip = document.querySelectorAll(".tooltipped");
+            var instances = M.Tooltip.init(toolTip);
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+  });
+    </script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>
