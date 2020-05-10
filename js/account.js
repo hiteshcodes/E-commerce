@@ -31,12 +31,14 @@ firebase.auth().onAuthStateChanged((user) => {
     data.map((doc) => {
       const ordersData = doc.data();
       let Id = doc.id.slice(0, 10);
+      let date = `${ordersData.createdAt.toDate()}`;
+      let dateOnly = (date.toString().slice(4, 16))
       let html = `
       <tr>
+      <td>${Id}</td>
         <td>${ordersData.name}</td>
-        <td>${Id}</td>
-        <td><a class="waves-effect waves-light modal-trigger" href="#modal1"
-                onClick="cancelOrders('${doc.id}')">Cancel</a></td>
+        <td>${dateOnly}</td>
+        <td><a class="waves-effect waves-light modal-trigger" href="#modal1" onClick="cancelOrders('${doc.id}')">Cancel</a></td>
       </tr>
       `;
       orderHtml += html;

@@ -226,7 +226,7 @@ textarea:-webkit-autofill:active {
   display: flex;
   position: absolute;
   top: 50%;
-  left: 67%;
+  left: 62%;
   transform: translate(-50%, -50%);
 }
 .profile-pic {
