@@ -132,11 +132,17 @@ signupForm.addEventListener("submit", (e) => {
   const password = signupForm["signup-password"].value;
   const password2 = signupForm["signup-password-repeat"].value;
   const phone = signupForm["signup-phone"].value;
+  var validatePhone = /^\d{10}$/;
+
   if (password != password2) {
     signupForm.querySelector(".signup-error").innerHTML =
       "Password dosen't match";
+  } else if (phone.match(validatePhone)) {
+    signupForm.querySelector(".signup-error").innerHTML =
+      "Please enter a valid phone number";
   } else {
     // signup the user and add firestore data
+    document.querySelector(".signup-progress").style.visibility = "visible";
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((data) => {
@@ -144,14 +150,11 @@ signupForm.addEventListener("submit", (e) => {
         return data.user.uid;
       })
       .then((uid) => {
-        console.log(uid);
-
         const credentials = {
           email,
           uid,
           phone,
         };
-
         db.doc(`users/${uid}`).set(credentials);
       })
       .then((c) => {
@@ -162,6 +165,7 @@ signupForm.addEventListener("submit", (e) => {
       })
       .catch((err) => {
         signupForm.querySelector(".signup-error").innerHTML = err.message;
+        document.querySelector(".signup-progress").style.visibility = "hidden";
       });
   }
 });
@@ -185,6 +189,7 @@ loginForm.addEventListener("submit", (e) => {
   const email = loginForm["login-email"].value;
   const password = loginForm["login-password"].value;
 
+  document.querySelector(".login-progress").style.visibility = "visible";
   auth
     .signInWithEmailAndPassword(email, password)
     .then((c) => {
@@ -198,6 +203,7 @@ loginForm.addEventListener("submit", (e) => {
     })
     .catch((err) => {
       loginForm.querySelector(".signin-error").innerHTML = err.message;
+      document.querySelector(".login-progress").style.visibility = "hidden";
     });
 });
 
