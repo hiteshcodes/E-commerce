@@ -5,7 +5,8 @@
 }
 body {
   font-family: "Poppins", sans-serif;
-  background: #e7eef8;
+  /* background: #e7eef8; */
+  background-color: #dddddd;
 }
 #header {
   background: #fb7f64;
@@ -155,10 +156,11 @@ body {
 }
 .form-main,
 .checkout-cart-main {
-  background-color: #e6e6e6;
   border-radius: 10px;
   padding: 20px !important;
   margin: 20px;
+  background: #dddddd;
+  box-shadow: 20px 20px 60px #bcbcbc, -20px -20px 60px #fefefe;
 }
 .checkout-cart-main {
   margin-left: 50px !important;
@@ -201,14 +203,11 @@ textarea:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 50px inset #e6e6e6 !important;
 }
 .errors {
-  /* text-align: center;
-  width: 90%;
-  font-weight: 500;
-  font-size: 18px; */
   color: red;
 }
 #section,
-#main {
+#main,
+#account-main {
   height: 750px;
   width: 100%;
   margin: auto;
@@ -217,16 +216,17 @@ textarea:-webkit-autofill:active {
 /* Accounts styles */
 .account-profile,
 .account-order {
-  background: #e6e6e6;
   border-radius: 10px;
   margin: 39px;
   height: 300px;
+  background: #dddddd;
+  box-shadow: 20px 20px 60px #bcbcbc, -20px -20px 60px #fefefe;
 }
 .account-no-orders-heading {
   display: flex;
   position: absolute;
   top: 50%;
-  left: 62%;
+  left: 67%;
   transform: translate(-50%, -50%);
 }
 .profile-pic {
@@ -259,17 +259,26 @@ textarea:-webkit-autofill:active {
   grid-auto-flow: dense;
   padding: 1rem;
 }
-
+.search-nav,
+.search-mobile:focus {
+  border-radius: 50px !important;
+  width: 50%;
+  margin: auto;
+  height: 60px;
+}
 .card {
   text-align: left;
-  background: #f3efee !important;
+  /* background: #f3efee !important; */
+  background: #dddddd !important;
+  box-shadow: 20px 20px 60px #bcbcbc, -20px -20px 60px #fefefe !important;
   height: 420px !important;
   width: 270px !important;
   margin: 20px auto !important;
-  border-radius: 10px !important;
+  border-radius: 15px !important;
 }
 .card:hover {
-  box-shadow: 2px 3px 5px rgb(75, 74, 74);
+  /* box-shadow: 2px 3px 5px rgb(75, 74, 74); */
+  box-shadow: -20px -20px 60px #bcbcbc, 20px 20px 60px #fefefe !important;
 }
 .card-content {
   margin: 0px !important;

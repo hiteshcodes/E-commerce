@@ -106,12 +106,13 @@
             <small class="errors password-error"></small>
           </div>
           <div class="input-field">
-            <input type="number" id="signup-phone" required />
+            <input type="tel" id="signup-phone" required />
             <label for="signup-phone">Phone</label>
             <small class="errors password-error"></small>
           </div>
           <small class="signup-error center-align errors"></small>
           <br />
+
           <div class="progress signup-progress" style="background: none !important; visibility: hidden;">
             <div class="indeterminate blue darken-3"></div>
           </div>
@@ -315,65 +316,65 @@
         <a type="email" class="grey-text text-lighten-4 right" href="#!">service@varient.com</a>
       </div>
     </div>
-  </>
+    </>
 
-  <script>
-    AOS.init({
-      // duration: 1500,
-    });
-  </script>
+    <script>
+      AOS.init({
+        // duration: 1500,
+      });
+    </script>
 
-  <!-- firebase configs -->
-  <!-- The core Firebase JS SDK is always requi  and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+    <!-- firebase configs -->
+    <!-- The core Firebase JS SDK is always requi  and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
 
-  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
 
-  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-functions.js"></script>
 
-  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
 
-  <!-- TODO Add SDKs for Firebase products that you want to use
+    <!-- TODO Add SDKs for Firebase products that you want to use
             https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
 
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyCqv05eagwoCTjHiUVWLmTzHl-dDh2X5hI",
-      authDomain: "ecommerce-f108f.firebaseapp.com",
-      databaseURL: "https://ecommerce-f108f.firebaseio.com",
-      projectId: "ecommerce-f108f",
-      storageBucket: "ecommerce-f108f.appspot.com",
-      messagingSenderId: "351954540442",
-      appId: "1:351954540442:web:2f34e401f4a9bb70c34c23",
-      measurementId: "G-DZDK7934TE",
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCqv05eagwoCTjHiUVWLmTzHl-dDh2X5hI",
+        authDomain: "ecommerce-f108f.firebaseapp.com",
+        databaseURL: "https://ecommerce-f108f.firebaseio.com",
+        projectId: "ecommerce-f108f",
+        storageBucket: "ecommerce-f108f.appspot.com",
+        messagingSenderId: "351954540442",
+        appId: "1:351954540442:web:2f34e401f4a9bb70c34c23",
+        measurementId: "G-DZDK7934TE",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
 
-    //make firebase auth and reference
-    const auth = firebase.auth();
-    const db = firebase.firestore();
-    const functions = firebase.functions();
+      //make firebase auth and reference
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+      const functions = firebase.functions();
 
       //firestore ssettings l4
       // db.settings({ timestampsInSnapshots: true });
-  </script>
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var elems = document.querySelectorAll(".sidenav");
-      var instances = M.Sidenav.init(elems);
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      var toolTip = document.querySelectorAll(".tooltipped");
-      var instances = M.Tooltip.init(toolTip);
-    });
-  </script>
-  <script src="js/auth.js"></script>
+    </script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var elems = document.querySelectorAll(".sidenav");
+        var instances = M.Sidenav.init(elems);
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        var toolTip = document.querySelectorAll(".tooltipped");
+        var instances = M.Tooltip.init(toolTip);
+      });
+    </script>
+    <script src="js/auth.js"></script>
 </body>
 
 </html>
