@@ -239,3 +239,41 @@ document.addEventListener("DOMContentLoaded", function () {
   var items = document.querySelectorAll(".collapsible");
   M.Collapsible.init(items);
 });
+
+//forget password
+function forgetpass() {
+  document.querySelector("#login-form").style.display = "none";
+  document.querySelector(".reset-form").style.display = "block";
+}
+//back to Login
+function backToLogin() {
+  document.querySelector("#login-form").style.display = "block";
+  document.querySelector(".reset-form").style.display = "none";
+  document.querySelector(".forget-password-success").style.display = "none";
+  document.querySelector(".forget-password-content").style.display = "block";
+}
+
+// function reset() password {}
+let resetForm = document.querySelector(".reset-form");
+resetForm.addEventListener("click", (e) => {
+  e.preventDefault();
+  var email = document.querySelector(".femail").value;
+  if (email == "") {
+    document.querySelector(".forget-password-error").innerHTML =
+      "Email cannot remain empty";
+  } else {
+    firebase
+      .auth()
+      .sendPasswordResetEmail(email)
+      .then(() => {
+        document.querySelector(".forget-password-content").style.display =
+          "none";
+        document.querySelector(".forget-password-success").style.display =
+          "block";
+      })
+      .catch((err) => {
+        document.querySelector(".forget-password-error").innerHTML =
+          err.message;
+      });
+  }
+});
