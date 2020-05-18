@@ -35,10 +35,10 @@ firebase.auth().onAuthStateChanged((user) => {
       let dateOnly = (date.toString().slice(4, 16))
       let html = `
       <tr>
-      <td>${Id}</td>
+      <td>${Id.toUpperCase()}</td>
         <td>${ordersData.name}</td>
         <td>${dateOnly}</td>
-        <td><a class="waves-effect waves-light modal-trigger" href="#modal1" onClick="cancelOrders('${doc.id}')">Cancel</a></td>
+        <td><a class="waves-effect waves-light modal-trigger btn red" href="#modal1" onClick="cancelOrders('${doc.id}')">Cancel</a></td>
       </tr>
       `;
       orderHtml += html;
