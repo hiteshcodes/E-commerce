@@ -107,7 +107,7 @@ body {
   width: 95%;
   margin: auto;
 }
-.highlight1 img{
+.highlight1 img {
   width: 60%;
 }
 .highlight-heading {
@@ -157,7 +157,7 @@ body {
   width: 90%;
   margin: auto;
 }
-.form-main,
+.form-card-payment-content,
 .checkout-cart-main {
   border-radius: 10px;
   padding: 20px !important;
@@ -335,4 +335,10 @@ footer a:hover {
 .fa-twitter:hover {
   background-color: #1a91da;
   color: white !important;
+}
+@media print {
+  html,
+  body {
+    display: none; /* hide whole page */
+  }
 }
