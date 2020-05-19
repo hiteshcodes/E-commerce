@@ -107,6 +107,9 @@ body {
   width: 95%;
   margin: auto;
 }
+.highlight1 img{
+  width: 60%;
+}
 .highlight-heading {
   width: 50%;
   margin: auto;
@@ -168,7 +171,6 @@ body {
 .modal {
   background-color: #f5eee2 !important;
   border-radius: 10px !important;
-  width: 45% !important;
   margin: auto;
   overflow-y: visible;
 }
@@ -178,7 +180,8 @@ body {
 }
 .modal-heading {
   text-align: center;
-  background-color: #fb7f64;
+  background-color: #f44336;
+  color: white;
   width: 30%;
   margin: auto;
   padding: 10px;
