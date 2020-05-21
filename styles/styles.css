@@ -8,6 +8,9 @@ body {
   /* background: #e7eef8; */
   background-color: #dddddd;
 }
+body::-webkit-scrollbar {
+    display: none;
+}
 #header {
   background: #fb7f64;
   height: 30px;
@@ -337,8 +340,7 @@ footer a:hover {
   color: white !important;
 }
 @media print {
-  html,
-  body {
+  #nav {
     display: none; /* hide whole page */
   }
 }
