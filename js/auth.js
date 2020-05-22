@@ -277,3 +277,12 @@ resetForm.addEventListener("click", (e) => {
       });
   }
 });
+// scripts for navbar
+document.addEventListener("DOMContentLoaded", function () {
+  var elems = document.querySelectorAll(".sidenav");
+  var instances = M.Sidenav.init(elems);
+});
+document.addEventListener("DOMContentLoaded", function () {
+  var toolTip = document.querySelectorAll(".tooltipped");
+  var instances = M.Tooltip.init(toolTip);
+});

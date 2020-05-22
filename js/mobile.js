@@ -22,7 +22,7 @@ const fetchMobilePhones = (data) => {
           <span class="card-title activator black-text text-darken-1"><h6>${mobilePhones.name}</h6><i class="material-icons three-dots right">more_vert</i></span>
            <h6>₹. ${mobilePhones.price}</h6>
           <p><button style= "font-size: 11px" class="btn " type="submit" name="action" onClick="addToCart('${mobilePhones.name}','${mobilePhones.price}', '${mobilePhones.image}')">Add to cart
-          <i class="material-icons right">add_shopping_cart</i>
+          <i class="material-icons right">shopping_cart</i>
           </button></p>
       </div>
       <div class="card-reveal">
@@ -113,7 +113,7 @@ mobileForm.addEventListener("submit", (e) => {
           <span class="card-title activator black-text text-darken-1"><h6>${mobilePhones.name}</h6><i class="material-icons three-dots right">more_vert</i></span>
            <h6>₹. ${mobilePhones.price}</h6>
           <p><button style= "font-size: 11px" class="btn " type="submit" name="action" onClick="addToCart('${mobilePhones.name}','${mobilePhones.price}', '${mobilePhones.image}')">Add to cart
-          <i class="material-icons right">add_shopping_cart</i>
+          <i class="material-icons right">shopping_cart</i>
           </button></p>
       </div>
       <div class="card-reveal">

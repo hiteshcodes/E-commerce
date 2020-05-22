@@ -29,60 +29,64 @@
 </head>
 
 <body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">loop</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
-  <nav id="nav">
-    <div class="logo">
-      <a href="index.html"><img src="img/loop-removebg-preview.png" alt="logo">
-      </a>
-      <a href="index.html">
-        <p class="loop">loop</p>
-      </a>
-    </div>
-    <a href="#" class="brand-logo"></a>
-
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="mobilePhones.html">Mobiles</a>
-      <a href="accessories.html">Accessories</a>
-
-    </div>
-    <div class="user">
-      <ul class="guides" style="border: none;">
-        <li class="admin" style="display : none" ;>
-          <a href="dashboard.html" class="modal-trigger" data-target="">
-            <i class="large material-icons">assessment</i>
-          </a>
+      <ul class="container center hide-on-med-and-down">
+        <li>
+          <a href="index.html">Home</a>
         </li>
-        <li class="logged-in" style="display : none" ;>
-          <a href="#" class="modal-trigger tooltipped" data-target="modal-account" data-position="bottom"
-            data-tooltip="Account">
-            <i class="large material-icons">account_box</i>
-          </a>
+        <li>
+          <a href="mobilePhones.html">Mobiles</a>
         </li>
-        <li class="logged-in" style="display : none" ;>
-          <a href="#" class="tooltipped" id="logout" data-position="bottom" data-tooltip="Logout">
-            <i class="large material-icons">logout</i>
-          </a>
+        <li>
+          <a href="accessories.html">Accessories</a>
         </li>
-        <li class="logged-in" style="display : none" ;>
-          <a href="#" class="modal-trigger tooltipped" data-target="modal-create" id="cart" data-position="bottom"
-            data-tooltip="Cart">
-            <i class="large material-icons">shopping_cart</i>
-          </a>
-        </li>
-        <li class="logged-out" style="display : none" ;>
-          <a href="#" class="modal-trigger btn white black-text" data-target="modal-login">Login</a>
-        </li>
-        <li class="logged-out" style="display : none" ;>
-          <a style="border: 1px solid white;" href="#" class="modal-trigger btn" data-target="modal-signup">Sign
-            up</a>
-        </li>
-        </span>
       </ul>
+      <ul class="right">
+        <ul class="guides" style="border: none;">
+          <li class="admin" style="display : none" ;>
+            <a href="dashboard.html" class="modal-trigger" data-target="">
+              <i class="large material-icons">assessment</i>
+            </a>
+          </li>
+          <li class="logged-in" style="display : none" ;>
+            <a href="#" class="modal-trigger tooltipped" data-target="modal-account" data-position="bottom"
+              data-tooltip="Account">
+              <i class="large material-icons">account_box</i>
+            </a>
+          </li>
+          <li class="logged-in" style="display : none" ;>
+            <a href="#" class="tooltipped" id="logout" data-position="bottom" data-tooltip="Logout">
+              <i class="large material-icons">logout</i>
+            </a>
+          </li>
+          <li class="logged-in" style="display : none" ;>
+            <a href="#" class="modal-trigger tooltipped" data-target="modal-create" id="cart" data-position="bottom"
+              data-tooltip="Cart">
+              <i class="large material-icons">shopping_cart</i>
+            </a>
+          </li>
+          <li class="logged-out" style="display : none" ;>
+            <a href="#" class="modal-trigger btn white black-text" data-target="modal-login">Login</a>
+          </li>
+          <li class="logged-out" style="display : none" ;>
+            <a style="border: 1px solid white;" href="#" class="modal-trigger btn" data-target="modal-signup">Sign
+              up</a>
+          </li>
+          </span>
+        </ul>
+      </ul>
+
     </div>
   </nav>
-
-
+  <ul class="sidenav center" id="mobile-demo">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="mobilePhones.html">Mobile</a></li>
+    <li><a href="accessories.html">Accessories</a></li>
+  </ul>
   <main id="main">
     <!-- SIGN UP MODAL -->
     <div id="modal-signup" class="modal modal-fixed-footer">
@@ -112,7 +116,6 @@
           </div>
           <small class="signup-error center-align errors"></small>
           <br />
-
           <div class="progress signup-progress" style="background: none !important; visibility: hidden;">
             <div class="indeterminate blue darken-3"></div>
           </div>
@@ -135,7 +138,9 @@
             <input type="password" id="login-password" autocomplete="off" required />
             <label for="login-password">Your password</label>
           </div>
-          <p><a href="#" class="blue-grey-text forget-pass" onclick="forgetpass()">Forget Password?</a></p>
+          <p>
+            <a href="#" class="blue-grey-text forget-pass" onclick="forgetpass()">Forget Password?</a>
+          </p>
           <small class="signin-error center-align errors"></small>
           <br />
           <div class="progress login-progress" style="background: none !important; visibility: hidden;">
@@ -145,17 +150,22 @@
         </form>
         <form class="reset-form" style="display: none;">
           <div class="forget-password-content">
-            <h6>We will send an email will password reset link.</h6> <br>
+            <h6>We will send an email will password reset link.</h6>
+            <br />
             <div class="input-field">
               <input type="email" class="femail" />
               <label for="forget-email">Email address</label>
             </div>
-            <small class="errors forget-password-error"></small> <br>
+            <small class="errors forget-password-error"></small> <br />
             <button href="" class="btn">submit</button>
           </div>
-          <h4 style="display: none;" class="forget-password-success">Email sent! Check your inbox</h4>
+          <h4 style="display: none;" class="forget-password-success">
+            Email sent! Check your inbox
+          </h4>
           <div>
-            <blockquote><a href="#" onclick="backToLogin()">back to Login</a></blockquote>
+            <blockquote>
+              <a href="#" onclick="backToLogin()">back to Login</a>
+            </blockquote>
           </div>
         </form>
       </div>
@@ -181,7 +191,7 @@
         <div class="show-cart" style="display: none;">
           <h6 class="modal-heading">Your Shopping Cart</h6>
           <br />
-          <table class="centered">
+          <table class="center">
             <thead>
               <tr>
                 <th>Item</th>
@@ -226,17 +236,18 @@
   </main>
   <section id="highlight-section">
     <div class="highlight1">
-      <img src="img/highlight/samsunggalaxynote10.png" alt="" data-aos="fade-left" data-aos-duration="2500" />
+      <img src="img/highlight/samsunggalaxynote10.png" alt="mobile-highlight" data-aos="fade-left"
+        data-aos-duration="2500" />
       <div class="highlight-heading">
-        <h1>Samsung Note 10</h1>
+        <h3>Samsung Note 10</h3>
       </div>
     </div>
     <div class="highlight1">
       <div class="highlight-heading">
-        <h2>OnePlus 7t Pro</h2>
+        <h3>OnePlus 7t Pro</h3>
         <h5>Lead with speed</h5>
       </div>
-      <img src="img/highlight/oneplus7tpro.png" alt="" data-aos="fade-right" data-aos-duration="2500" />
+      <img src="img/highlight/oneplus7tpro.png" alt="mobile-highlight" data-aos="fade-right" data-aos-duration="2500" />
     </div>
   </section>
   <main id="grids-main">
@@ -249,15 +260,14 @@
             <img src="resources/bluetoothecho.png" class="accessories-highlights" alt="" />
           </a>
         </div>
-
-        <div class="col l6 m12 s6" data-aos="zoom-in" data-aos-duration="1000">
-          <a href="accessories.html">
-            <img src="resources/mibandedit.png" class="accessories-highlights" alt="" />
-          </a>
-        </div>
         <div class="col l3 m4 s6" data-aos="zoom-in" data-aos-duration="1000">
           <a href="accessories.html">
             <img src="resources/earphone.png" class="accessories-highlights" alt="" />
+          </a>
+        </div>
+        <div class="col l6 m12 s12" data-aos="zoom-in" data-aos-duration="1000">
+          <a href="accessories.html">
+            <img src="resources/mibandedit.png" class="accessories-highlights" alt="" />
           </a>
         </div>
       </div>
@@ -297,7 +307,7 @@
     <div class="vertical"></div>
     <div class="article-card">
       <img src="img/icons/online-support.png" alt="" />
-      <p>Online Support 24/7</p>
+      <p>Support 24/7</p>
     </div>
     <div class="vertical"></div>
     <div class="article-card">
@@ -328,68 +338,58 @@
     <div class="footer-copyright">
       <div class="container">
         © 2020 Copyright
-        <a type="email" class="grey-text text-lighten-4 right" href="#!">service@varient.com</a>
+        <a type="email" class="grey-text text-lighten-4 right" href="#!">service@loop.com</a>
       </div>
     </div>
-    </>
+  </footer>
 
-    <script>
-      AOS.init({
-        // duration: 1500,
-      });
-    </script>
+  <script>
+    AOS.init({
+      // duration: 1500,
+    });
+  </script>
 
-    <!-- firebase configs -->
-    <!-- The core Firebase JS SDK is always requi  and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+  <!-- firebase configs -->
+  <!-- The core Firebase JS SDK is always requi  and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-functions.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-functions.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
 
-    <!-- TODO Add SDKs for Firebase products that you want to use
+  <!-- TODO Add SDKs for Firebase products that you want to use
             https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
 
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyCqv05eagwoCTjHiUVWLmTzHl-dDh2X5hI",
-        authDomain: "ecommerce-f108f.firebaseapp.com",
-        databaseURL: "https://ecommerce-f108f.firebaseio.com",
-        projectId: "ecommerce-f108f",
-        storageBucket: "ecommerce-f108f.appspot.com",
-        messagingSenderId: "351954540442",
-        appId: "1:351954540442:web:2f34e401f4a9bb70c34c23",
-        measurementId: "G-DZDK7934TE",
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCqv05eagwoCTjHiUVWLmTzHl-dDh2X5hI",
+      authDomain: "ecommerce-f108f.firebaseapp.com",
+      databaseURL: "https://ecommerce-f108f.firebaseio.com",
+      projectId: "ecommerce-f108f",
+      storageBucket: "ecommerce-f108f.appspot.com",
+      messagingSenderId: "351954540442",
+      appId: "1:351954540442:web:2f34e401f4a9bb70c34c23",
+      measurementId: "G-DZDK7934TE",
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
 
-      //make firebase auth and reference
-      const auth = firebase.auth();
-      const db = firebase.firestore();
-      const functions = firebase.functions();
+    //make firebase auth and reference
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    const functions = firebase.functions();
 
       //firestore ssettings l4
       // db.settings({ timestampsInSnapshots: true });
-    </script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var elems = document.querySelectorAll(".sidenav");
-        var instances = M.Sidenav.init(elems);
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        var toolTip = document.querySelectorAll(".tooltipped");
-        var instances = M.Tooltip.init(toolTip);
-      });
-    </script>
-    <script src="js/auth.js"></script>
+  </script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/auth.js"></script>
 </body>
 
 </html>

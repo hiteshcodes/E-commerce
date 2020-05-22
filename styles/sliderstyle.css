@@ -4,7 +4,6 @@
 
 #slider figure {
   position: relative;
-
   width: 500%;
   margin: 0;
   left: 0;
@@ -12,7 +11,9 @@
 }
 
 #slider figure img {
-  background: cover;
+  background: no-repeat;
+  max-height: 100vh;
+  display: block;
   width: 20%;
   float: left;
 }
