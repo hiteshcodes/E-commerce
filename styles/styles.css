@@ -110,7 +110,7 @@ body::-webkit-scrollbar {
   margin: 20px auto;
 }
 
-#grids-main h2 {
+#grids-main h4 {
   text-align: center;
   font-weight: 600;
 }
@@ -155,7 +155,6 @@ body::-webkit-scrollbar {
   background: #dddddd;
   box-shadow: 20px 20px 60px #bcbcbc, -20px -20px 60px #fefefe;
 }
-
 
 .modal,
 .modal-footer {
@@ -252,25 +251,24 @@ textarea:-webkit-autofill:active {
 .search-nav,
 .search-mobile:focus {
   border-radius: 50px !important;
-  width: 50%;
-  margin: 20px auto;
+  width: 90%;
   height: 60px;
 }
-
+.search-content{
+  margin: 20px auto;
+}
 .card {
   text-align: left;
-  /* background: #f3efee !important; */
-  background: #dddddd !important;
-  box-shadow: 20px 20px 60px #bcbcbc, -20px -20px 60px #fefefe !important;
+  background: var(--body-bg) !important;
   height: 420px !important;
   width: 270px !important;
   margin: 20px auto !important;
   border-radius: 15px !important;
+  transition: all 1.1s ease-in-out;
 }
 
 .card:hover {
-  /* box-shadow: 2px 3px 5px rgb(75, 74, 74); */
-  box-shadow: -20px -20px 60px #bcbcbc, 20px 20px 60px #fefefe !important;
+  transform: scale(1.0223);
 }
 
 .card-content {
@@ -344,19 +342,7 @@ footer a:hover {
   .browse-more {
     display: none;
   }
-  h3 {
-    font-size: 18px !important;
-  }
-  h5 {
-    font-size: 12px !important;
-  }
-  h6{
-    font-size: 10px !important;
-  }
-  p {
-    font-size: 12px;
-  }
-  .cart-row{
+  .cart-row {
     font-size: 10px;
   }
   #article {

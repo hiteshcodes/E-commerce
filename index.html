@@ -9,6 +9,9 @@
   <link rel="icon" href="img/loop-removebg-preview.png" />
 
   <link type="text/css" rel="stylesheet" href="styles/styles.css" />
+
+  <link rel="stylesheet" href="404/styles.css">
+
   <link type="text/css" rel="stylesheet" href="styles/sliderstyle.css" />
 
   <!-- materialize CSS -->
@@ -29,7 +32,7 @@
 </head>
 
 <body>
-  <nav>
+  <!-- <nav>
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo">loop</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -87,8 +90,7 @@
     <li><a href="mobilePhones.html">Mobile</a></li>
     <li><a href="accessories.html">Accessories</a></li>
   </ul>
-  <main id="main">
-    <!-- SIGN UP MODAL -->
+  <main id="main">  
     <div id="modal-signup" class="modal modal-fixed-footer">
       <div class="modal-content">
         <h4 class="modal-heading">Sign up</h4>
@@ -124,7 +126,6 @@
       </div>
     </div>
 
-    <!-- LOGIN MODAL -->
     <div id="modal-login" class="modal modal-fixed-footer">
       <div class="modal-content">
         <form id="login-form">
@@ -171,7 +172,6 @@
       </div>
     </div>
 
-    <!-- ACCOUNT MODAL -->
     <div id="modal-account" class="modal">
       <div class="modal-content center-align">
         <h4 class="modal-heading">Account</h4>
@@ -185,7 +185,6 @@
       </div>
     </div>
 
-    <!-- Cart MODAL -->
     <div id="modal-create" class="modal modal-fixed-footer">
       <div class="modal-content">
         <div class="show-cart" style="display: none;">
@@ -222,7 +221,6 @@
         </div>
       </div>
     </div>
-    <!-- --------------------------- image slideshow --------------------------- -->
     <section>
       <div id="slider">
         <figure>
@@ -239,19 +237,19 @@
       <img src="img/highlight/samsunggalaxynote10.png" alt="mobile-highlight" data-aos="fade-left"
         data-aos-duration="2500" />
       <div class="highlight-heading">
-        <h3>Samsung Note 10</h3>
+        <h4>Samsung Note 10</h4>
       </div>
     </div>
     <div class="highlight1">
       <div class="highlight-heading">
-        <h3>OnePlus 7t Pro</h3>
-        <h5>Lead with speed</h5>
+        <h4>OnePlus 7t Pro</h4>
+        <h6>Lead with speed</h6>
       </div>
       <img src="img/highlight/oneplus7tpro.png" alt="mobile-highlight" data-aos="fade-right" data-aos-duration="2500" />
     </div>
   </section>
   <main id="grids-main">
-    <h2>Hot Accessories</h2>
+    <h4>Hot Accessories</h4>
     <hr class="grids-main-hr" />
     <div class="accessories-highlight-main">
       <div class="row">
@@ -284,7 +282,7 @@
         </div>
         <div class="col l2 s12" data-aos="zoom-in" data-aos-duration="1000">
           <div class="browse-more">
-            <h4>Browse more</h4>
+            <h5>Browse more</h5>
             <a href="accessories.html">
               <img src="img/icons/right-arrow.png" class="accessories-highlights" alt="" />
             </a>
@@ -345,12 +343,9 @@
 
   <script>
     AOS.init({
-      // duration: 1500,
     });
   </script>
 
-  <!-- firebase configs -->
-  <!-- The core Firebase JS SDK is always requi  and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
 
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
@@ -359,12 +354,9 @@
 
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
 
-  <!-- TODO Add SDKs for Firebase products that you want to use
-            https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
 
   <script>
-    // Your web app's Firebase configuration
     var firebaseConfig = {
       apiKey: "AIzaSyCqv05eagwoCTjHiUVWLmTzHl-dDh2X5hI",
       authDomain: "ecommerce-f108f.firebaseapp.com",
@@ -375,21 +367,25 @@
       appId: "1:351954540442:web:2f34e401f4a9bb70c34c23",
       measurementId: "G-DZDK7934TE",
     };
-    // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
 
-    //make firebase auth and reference
     const auth = firebase.auth();
     const db = firebase.firestore();
     const functions = firebase.functions();
 
-      //firestore ssettings l4
-      // db.settings({ timestampsInSnapshots: true });
   </script>
-  <!-- Compiled and minified JavaScript -->
+   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="js/auth.js"></script>
+  <script src="js/auth.js"></script>  -->
+
+  <div class="page">
+    <div class="main">
+      <h1>Under construction</h1>
+      <p class="lead">This site is under maintenance, Will be back soon.</p>
+      <hr />
+    </div>
+  </div>
 </body>
 
 </html>
