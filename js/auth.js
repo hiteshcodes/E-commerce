@@ -223,7 +223,7 @@ const footerAddress = (data) => {
 
     let phoneHtml = "";
     const phone = `
-    <p><i class="fa fa-phone"></i> Phone - ${footerContent.phone}</p>
+    <p><i class="fa fa-phone"></i>Phone -<a href="tel:${footerContent.phone}">${footerContent.phone}</a></p>
     `;
     phoneHtml += phone;
     document.querySelector(".footer-address").innerHTML = addressHtml;

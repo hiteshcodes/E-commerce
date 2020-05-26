@@ -1,7 +1,7 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"); */
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,500;1,500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -40,6 +40,8 @@ body::-webkit-scrollbar {
 
 .brand-logo {
   left: 6%;
+  font-family: "DM Mono", monospace;
+  font-weight: 700;
 }
 .right {
   margin-right: 40px;
@@ -117,7 +119,7 @@ body::-webkit-scrollbar {
   margin: 20px auto;
 }
 
-#grids-main h4 {
+#grids-main h5 {
   text-align: center;
   font-weight: 600;
 }
@@ -310,6 +312,9 @@ footer {
 footer p {
   font-size: 14px;
 }
+footer a {
+  color: white;
+}
 footer a:hover {
   color: #ffee58 !important;
 }
@@ -364,6 +369,6 @@ footer a:hover {
     width: 30px;
   }
   footer p {
-  font-size: 12px;
-}
+    font-size: 12px;
+  }
 }
