@@ -1,3 +1,7 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +16,8 @@
   --btn: #3c303e;
 }
 body {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Open Sans", sans-serif;
   background-color: var(--body-bg);
   font-size: 100%;
 }
@@ -36,7 +41,9 @@ body::-webkit-scrollbar {
 .brand-logo {
   left: 6%;
 }
-
+.right {
+  margin-right: 40px;
+}
 .sidenav li {
   justify-content: space-evenly;
   margin-top: 20px;
@@ -132,28 +139,28 @@ body::-webkit-scrollbar {
   border-radius: 15px;
   margin: 150px auto 0px;
 }
-
+#main {
+  height: 100%;
+}
 #mobiles {
   min-height: 100vh;
 }
-
-#accessories {
+#account-main {
+  height: 100vh;
+}
+#checkout-main {
+  height: 100%;
+}
+#accessories-main {
   min-height: 100vh;
 }
-
 /* Create two equal columns that floats next to each other */
-
 #checkout-section {
-  width: 90%;
+  width: 95%;
   margin: auto;
 }
-
-.form-card-payment-content,
 .checkout-cart-main {
-  border-radius: 10px;
-  padding: 20px !important;
-  background: #dddddd;
-  box-shadow: 20px 20px 60px #bcbcbc, -20px -20px 60px #fefefe;
+  margin-right: 20px;
 }
 
 .modal,
@@ -186,21 +193,13 @@ textarea:-webkit-autofill:active {
   color: red;
 }
 
-#section,
-#main,
-#account-main {
-  width: 100%;
-  margin: auto;
-  align-items: center;
-}
-
 /* Accounts styles */
 
 .account-profile,
 .account-order {
   border-radius: 10px;
   margin: 39px;
-  height: 300px;
+  height: 100%;
   background: #dddddd;
   box-shadow: 20px 20px 60px #bcbcbc, -20px -20px 60px #fefefe;
 }
@@ -254,7 +253,7 @@ textarea:-webkit-autofill:active {
   width: 90%;
   height: 60px;
 }
-.search-content{
+.search-content {
   margin: 20px auto;
 }
 .card {
@@ -308,7 +307,9 @@ textarea:-webkit-autofill:active {
 footer {
   background: var(--nav-footer) !important;
 }
-
+footer p {
+  font-size: 14px;
+}
 footer a:hover {
   color: #ffee58 !important;
 }
@@ -339,6 +340,9 @@ footer a:hover {
   .brand-logo {
     margin-left: -100px !important;
   }
+  .right {
+    margin-right: 0px;
+  }
   .browse-more {
     display: none;
   }
@@ -359,4 +363,7 @@ footer a:hover {
   .article-card img {
     width: 30px;
   }
+  footer p {
+  font-size: 12px;
+}
 }

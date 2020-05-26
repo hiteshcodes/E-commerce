@@ -15,7 +15,7 @@ firebase.auth().onAuthStateChanged((user) => {
     // console.log(user.uid);
 
     //get user cart details
-    db.doc(`users/${user.uid}`)
+    db.doc(`users/${user.email}`)
       .collection("usercart")
       .onSnapshot((snapshot) => {
         // console.log(snapshot.docs);
@@ -39,7 +39,7 @@ function removeItem(name, useruid, price) {
   }
 
   // db.doc(`users/${user.uid}`).collection('usercart').doc(`${name}`).delete()
-  db.doc(`users/${user.uid}`).collection("usercart").doc(name).delete();
+  db.doc(`users/${user.email}`).collection("usercart").doc(name).delete();
   M.toast({ html: "Item removed" });
 
   var del = document.querySelector(".remove-from-cart");
@@ -155,7 +155,7 @@ signupForm.addEventListener("submit", (e) => {
           uid,
           phone,
         };
-        db.doc(`users/${uid}`).set(credentials);
+        db.doc(`users/${email}`).set(credentials);
       })
       .then((c) => {
         const modal = document.querySelector("#modal-signup");

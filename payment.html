@@ -11,9 +11,6 @@
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/materialize.css">
 
-    <!-- Google fotns poppins -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700,900&display=swap" rel="stylesheet" />
-
     <!-- materialize icons -->
     <link rel="stylesheet" href="styles/materializecssicons.css">
 
@@ -86,7 +83,6 @@
         <li><a href="accessories.html">Accessories</a></li>
     </ul>
     <main id="main">
-        <!-- SIGN UP MODAL -->
         <div id="modal-signup" class="modal modal-fixed-footer">
             <div class="modal-content">
                 <h4 class="modal-heading">Sign up</h4>
@@ -122,202 +118,197 @@
             </div>
         </div>
 
-        <main id="main">
-            <!-- here are tehe modals -->
-            <!-- SIGN UP MODAL -->
-            <div id="modal-signup" class="modal">
-                <div class="modal-content">
-                    <h4>Sign up</h4><br />
-                    <form id="signup-form">
+        <div id="modal-login" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <form id="login-form">
+                    <h4 class="modal-heading">Login</h4>
+                    <br />
+                    <div class="input-field">
+                        <input type="email" id="login-email" autocomplete="off" required />
+                        <label for="login-email">Email address</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="login-password" autocomplete="off" required />
+                        <label for="login-password">Your password</label>
+                    </div>
+                    <p>
+                        <a href="#" class="blue-grey-text forget-pass" onclick="forgetpass()">Forget Password?</a>
+                    </p>
+                    <small class="signin-error center-align errors"></small>
+                    <br />
+                    <div class="progress login-progress" style="background: none !important; visibility: hidden;">
+                        <div class="indeterminate blue darken-3"></div>
+                    </div>
+                    <button class="btn z-depth-0">Login</button>
+                </form>
+                <form class="reset-form" style="display: none;">
+                    <div class="forget-password-content">
+                        <h6>We will send an email will password reset link.</h6>
+                        <br />
                         <div class="input-field">
-                            <input type="email" id="signup-email" requi />
-                            <label for="signup-email">Email address</label>
+                            <input type="email" class="femail" />
+                            <label for="forget-email">Email address</label>
                         </div>
-                        <div class="input-field">
-                            <input type="password" id="signup-password" requi />
-                            <label for="signup-password">Choose password</label>
-                        </div>
-                        <button class="btn     z-depth-0">Sign up</button>
-                        <br>
-                        <p class="signup-error center-align errors"></p>
-                    </form>
+                        <small class="errors forget-password-error"></small> <br />
+                        <button href="" class="btn">submit</button>
+                    </div>
+                    <h4 style="display: none;" class="forget-password-success">
+                        Email sent! Check your inbox
+                    </h4>
+                    <div>
+                        <blockquote>
+                            <a href="#" onclick="backToLogin()">back to Login</a>
+                        </blockquote>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="modal-account" class="modal">
+            <div class="modal-content center-align">
+                <h4 class="modal-heading">Account</h4>
+                <div class="row">
+                    <div class="col l12">
+                        <hr style="margin: 10px 0px;" />
+                        <div class="account-details"></div>
+                    </div>
+                    <p><a href="account.html">More</a></p>
                 </div>
             </div>
+        </div>
 
-            <!-- LOGIN MODAL -->
-            <div id="modal-login" class="modal">
-                <div class="modal-content">
-                    <h4>Login</h4><br />
-                    <form id="login-form">
-                        <div class="input-field">
-                            <input type="email" id="login-email" requi />
-                            <label for="login-email">Email address</label>
-                        </div>
-                        <div class="input-field">
-                            <input type="password" id="login-password" requi />
-                            <label for="login-password">Your password</label>
-                        </div>
-                        <button class="btn     z-depth-0">Login</button>
-                        <br>
-                        <p class="signin-error center-align"></p>
-                    </form>
+        <div id="modal-create" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <div class="show-cart" style="display: none;">
+                    <h6 class="modal-heading">Your Shopping Cart</h6>
+                    <br />
+                    <table class="center">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Name</th>
+                                <th>Remove</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody class="cartWrapper"></tbody>
+                        <tr class="bottom-table">
+                            <td></td>
+                            <td style="text-align: center;">
+                                <h6>Total Price :</h6>
+                            </td>
+                            <td>
+                                <h6 class="total-price-count"></h6>
+                            </td>
+                            <td>
+                                <a href="checkout.html" class="btn-checkout btn">Checkout</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="hide-cart center" style="display: none;">
+                    <h5>Your Shopping Cart is Empty</h5>
+                    <img src="img/empty-cart.jpg" alt="empty-cart" /> <br />
+                    <a href="index.html" class="btn">Shop Now</a>
                 </div>
             </div>
-
-            <!-- ACCOUNT MODAL -->
-            <div id="modal-account" class="modal  modal-fixed-footer">
-                <div class="modal-content center-align">
-                    <h4>Account</h4><br />
+        </div>
+        <div class="checkout-heading" style="text-align: center;">
+            <h4 style="margin: 20px;">Complete your payment</h4>
+        </div>
+        <hr>
+        <section id="checkout-section">
+            <!-- Your orders  -->
+            <div class="row">
+                <div class="col form-main l7 m12 s12">
                     <div class="row">
-                        <div class="col l6">
-                            <h5>Profile</h5> <br>
-                            <hr style="margin: 10px 0px;">
-                            <div class="account-details">
+                        <div class="input-field col l6 s6">
+                            <form action="#">
+                                <p>
+                                    <label id="online-pay-label">
+                                        <input class="with-gap" id="online-pay" name="group1" type="radio" value="c it"
+                                            onclick="onlinePayChecked()" />
+                                        <span>Credit / Debit Card</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label id="cod-pay-label">
+                                        <input class="with-gap" id="cod-pay" name="group1" type="radio" value="cod"
+                                            onclick="codChecked()" />
+                                        <span>COD</span>
+                                    </label>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="form-card-payment" class="form-main" style="display: none;">
+                        <div class="form-card-payment-content">
+                            <div style="margin-bottom: 20px;padding: 7px 0;font-size: 24px;">
+                                <h5>Cards Accepted</h5>
+                                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                <i class="fa fa-cc-discover" style="color:orange;"></i>
 
                             </div>
+                            <form id="online-payment-gateway">
+                                <div class="row">
+                                    <div class="input-field col l6 s12">
+                                        <input id="name-on-card" type="text">
+                                        <label class="active" for="first_name2">Name on card</label>
+                                    </div>
+                                    <div class="input-field col l6 s12">
+                                        <input id="card-number" type="number">
+                                        <label class="active" for="first_name2">Card number</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col l6 s6">
+                                        <input type="date" id="exp-date">
+                                        <label class="active" for="first_name2">Expiry Date</label>
+                                    </div>
+
+                                    <div class="input-field col l6 s6">
+                                        <input id="cvv" type="number">
+                                        <label for="icon_telephone">CVV</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label>
+                                        <input type="checkbox" disabled="disable" checked="checked"
+                                            id="agree-checkbox" />
+                                        <span style="color: #235952;">You agree our terms and conditions and agree
+                                            to pay
+                                            the
+                                            billing amount.</span>
+                                    </label>
+                                    <br>
+                                    <div class="input-field col l6 s6">
+                                        <div>
+                                            <p class="errors" id="checkout-form-errors" style="display: block"></p>
+                                        </div>
+                                        <br>
+                                        <a class="btn btn-proceed-to-payment" onclick="orderPlacedOnline()">Confirm</a>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
+
                     </div>
-                </div>
-            </div>
-
-            <!-- CART MODAL -->
-            <div id="modal-create" class="modal modal-fixed-footer">
-                <div class="modal-content">
-                    <div class="show-cart" style="display: none">
-                        <h6>Your Shopping Cart</h6><br />
-                        <table class="centered">
-                            <thead>
-                                <tr>
-                                    <th>Item</th>
-                                    <th>Name</th>
-                                    <th>Remove</th>
-                                    <th>Price</th>
-                                </tr>
-                            </thead>
-                            <tbody class="cartWrapper">
-
-                            </tbody>
-                            <tr class="bottom-table">
-                                <td>
-
-                                </td>
-                                <td style="text-align: center;">
-                                    <h6>Total Price : </h6>
-                                </td>
-                                <td>
-                                    <h6 class="total-price-count"></h6>
-                                </td>
-                                <td>
-                                    <a href="checkout.html" class="btn-checkout btn">Checkout</a>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="hide-cart center" style="display : none">
-                        <h5>Your Shopping Cart is Empty</h5>
-                        <img src="img/empty-cart.jpg" alt="empty-cart"> <br>
-                        <a href="index.html" class="btn">Shop Now</a>
-                    </div>
-
-                </div>
-            </div>
-            <div class="checkout-heading" style="text-align: center;">
-                <h4 style="margin: 20px;">Complete your payment</h4>
-            </div>
-            <hr>
-            <section id="checkout-section">
-                <!-- Your orders  -->
-                <div class="row">
-                    <div class="col form-main l7 m12 s12">
+                    <div id="form-cod-payment" style="display: none;">
                         <div class="row">
                             <div class="input-field col l6 s6">
-                                <form action="#">
-                                    <p>
-                                        <label id="online-pay-label">
-                                            <input class="with-gap" id="online-pay" name="group1" type="radio"
-                                                value="c it" onclick="onlinePayChecked()" />
-                                            <span>Credit / Debit Card</span>
-                                        </label>
-                                    </p>
-                                    <p>
-                                        <label id="cod-pay-label">
-                                            <input class="with-gap" id="cod-pay" name="group1" type="radio" value="cod"
-                                                onclick="codChecked()" />
-                                            <span>COD</span>
-                                        </label>
-                                    </p>
-                                </form>
-                            </div>
-                        </div>
-                        <div id="form-card-payment" class="form-main" style="display: none;">
-                            <div class="form-card-payment-content">
-                                <div style="margin-bottom: 20px;padding: 7px 0;font-size: 24px;">
-                                    <h5>Cards Accepted</h5>
-                                    <i class="fa fa-cc-visa" style="color:navy;"></i>
-                                    <i class="fa fa-cc-amex" style="color:blue;"></i>
-                                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                                    <i class="fa fa-cc-discover" style="color:orange;"></i>
-
+                                <div>
+                                    <p class="errors" id="checkout-form-errors" style="display: block;"></p>
                                 </div>
-                                <form action="" id="online-payment-gateway">
-                                    <div class="row">
-                                        <div class="input-field col l6 s12">
-                                            <input id="name-on-card" type="text">
-                                            <label class="active" for="first_name2">Name on card</label>
-                                        </div>
-                                        <div class="input-field col l6 s12">
-                                            <input id="card-number" type="number">
-                                            <label class="active" for="first_name2">Card number</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col l6 s6">
-                                            <input type="date" id="exp-date">
-                                            <label class="active" for="first_name2">Expiry Date</label>
-                                        </div>
-
-                                        <div class="input-field col l6 s6">
-                                            <input id="cvv" type="number">
-                                            <label for="icon_telephone">CVV</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label>
-                                            <input type="checkbox" disabled="disable" checked="checked"
-                                                id="agree-checkbox" />
-                                            <span style="color: #235952;">You agree our terms and conditions and agree
-                                                to pay
-                                                the
-                                                billing amount.</span>
-                                        </label>
-                                        <br>
-                                        <div class="input-field col l6 s6">
-                                            <div>
-                                                <p class="errors" id="checkout-form-errors" style="display: block"></p>
-                                            </div>
-                                            <br>
-                                            <a class="btn btn-proceed-to-payment"
-                                                onclick="orderPlacedOnline()">Confirm</a>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-
-                        </div>
-                        <div id="form-cod-payment" style="display: none;">
-                            <div class="row">
-                                <div class="input-field col l6 s6">
-                                    <div>
-                                        <p class="errors" id="checkout-form-errors" style="display: block;"></p>
-                                    </div>
-                                    <br>
-                                    <a class="btn btn-proceed-to-payment" onclick="orderPlacedCod()">Place your
-                                        Order</a>
-                                </div>
+                                <br>
+                                <a class="btn btn-proceed-to-payment" onclick="orderPlacedCod()">Place your
+                                    Order</a>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col l4 m12 s12 checkout-cart-main">
+                </div>
+                <!-- <div class="col l4 m12 s12 checkout-cart-main">
                     <table class="centered">
                         <h5 style="text-align: center;"><b>Your Order</b></h5>
                         <thead>
@@ -364,82 +355,82 @@
                         </tr>
                     </table>
                 </div> -->
-                </div>
-            </section>
+            </div>
+        </section>
 
-        </main>
-        <footer class="page-footer">
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Reach Us</h5>
+                    <p class="grey-text text-lighten-4 footer-address"></p>
+                    <p class="footer-phone"></p>
+
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Reac Us</h5>
+                    <a class="grey-text text-lighten-3" target="_blank" href="https://www.facebook.com/"><i
+                            class="fa fa-facebook"></i></a>
+                    <a class="grey-text text-lighten-3" target="_blank" href="https://www.instagram.com/"><i
+                            class="fa fa-instagram"></i></a>
+                    <a class="grey-text text-lighten-3" target="_blank" href="https://www.twitter.com/"><i
+                            class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
             <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Reach Us</h5>
-                        <p class="grey-text text-lighten-4 footer-address"></p>
-                        <p class="footer-phone"></p>
-
-                    </div>
-                    <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">Reac Us</h5>
-                        <a class="grey-text text-lighten-3" target="_blank" href="https://www.facebook.com/"><i
-                                class="fa fa-facebook"></i></a>
-                        <a class="grey-text text-lighten-3" target="_blank" href="https://www.instagram.com/"><i
-                                class="fa fa-instagram"></i></a>
-                        <a class="grey-text text-lighten-3" target="_blank" href="https://www.twitter.com/"><i
-                                class="fa fa-twitter"></i></a>
-                    </div>
-                </div>
+                © 2020 Copyright
+                <a class="grey-text text-lighten-4 right" href="#!">service@varient.com</a>
             </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2020 Copyright
-                    <a class="grey-text text-lighten-4 right" href="#!">service@varient.com</a>
-                </div>
-            </div>
-        </footer>
-        <!-- firebase configs -->
-        <!-- The core Firebase JS SDK is always requi  and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+        </div>
+    </footer>
+    <!-- firebase configs -->
+    <!-- The core Firebase JS SDK is always requi  and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
 
-        <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
 
-        <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
 
-        <!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
              https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
 
-        <script>
-            // Your web app's Firebase configuration
-            var firebaseConfig = {
-                apiKey: "AIzaSyCqv05eagwoCTjHiUVWLmTzHl-dDh2X5hI",
-                authDomain: "ecommerce-f108f.firebaseapp.com",
-                databaseURL: "https://ecommerce-f108f.firebaseio.com",
-                projectId: "ecommerce-f108f",
-                storageBucket: "ecommerce-f108f.appspot.com",
-                messagingSenderId: "351954540442",
-                appId: "1:351954540442:web:2f34e401f4a9bb70c34c23",
-                measurementId: "G-DZDK7934TE"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-            firebase.analytics();
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCqv05eagwoCTjHiUVWLmTzHl-dDh2X5hI",
+            authDomain: "ecommerce-f108f.firebaseapp.com",
+            databaseURL: "https://ecommerce-f108f.firebaseio.com",
+            projectId: "ecommerce-f108f",
+            storageBucket: "ecommerce-f108f.appspot.com",
+            messagingSenderId: "351954540442",
+            appId: "1:351954540442:web:2f34e401f4a9bb70c34c23",
+            measurementId: "G-DZDK7934TE"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
 
-            //make firebase auth and reference
-            const auth = firebase.auth();
-            const db = firebase.firestore();
+        //make firebase auth and reference
+        const auth = firebase.auth();
+        const db = firebase.firestore();
 
         //firestore ssettings
         // db.settings({ timestampsInSnapshots: true });
-        </script>
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                var toolTip = document.querySelectorAll('.tooltipped');
-                var instances = M.Tooltip.init(toolTip);
-            });
-        </script>
-        <script src="js/auth.js"></script>
-        <script src="js/payment.js"></script>
-        </body>
+    </script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var toolTip = document.querySelectorAll('.tooltipped');
+            var instances = M.Tooltip.init(toolTip);
+        });
+    </script>
+    <script src="js/auth.js"></script>
+    <script src="js/payment.js"></script>
+    </body>
 
 </html>

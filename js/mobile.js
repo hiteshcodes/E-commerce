@@ -58,7 +58,7 @@ function addToCart(name, price, image) {
     M.toast({ html: "Please Login or Signup" });
   }
 
-  db.doc(`users/${user.uid}`)
+  db.doc(`users/${user.email}`)
     .collection("usercart")
     .doc(`${name}`)
     .get()
@@ -67,7 +67,7 @@ function addToCart(name, price, image) {
       if (doc.exists) {
         M.toast({ html: "Item already added to your cart" });
       } else {
-        db.doc(`users/${user.uid}`)
+        db.doc(`users/${user.email}`)
           .collection(`usercart`)
           .doc(`${name}`)
           .set({
@@ -147,7 +147,7 @@ mobileForm.addEventListener("submit", (e) => {
       M.toast({ html: "Please Login or Signup" });
     }
 
-    db.doc(`users/${user.uid}`)
+    db.doc(`users/${user.email}`)
       .collection("usercart")
       .doc(`${name}`)
       .get()
@@ -158,7 +158,7 @@ mobileForm.addEventListener("submit", (e) => {
             html: "Item already added to your cart",
           });
         } else {
-          db.doc(`users/${user.uid}`)
+          db.doc(`users/${user.email}`)
             .collection(`usercart`)
             .doc(`${name}`)
             .set({

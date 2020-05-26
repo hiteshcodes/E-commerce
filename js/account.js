@@ -1,6 +1,6 @@
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
-    db.doc(`users/${user.uid}`).onSnapshot((doc) => {
+    db.doc(`users/${user.email}`).onSnapshot((doc) => {
       const email = doc.data().email;
       const phone = doc.data().phone;
       document.querySelector(".account-email").innerHTML = email;
@@ -11,7 +11,7 @@ firebase.auth().onAuthStateChanged((user) => {
 });
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
-    db.doc(`users/${user.uid}`)
+    db.doc(`users/${user.email}`)
       .collection("orders")
       .onSnapshot((snapshot) => {
         accountOrders(snapshot.docs);
@@ -52,7 +52,7 @@ const cancelOrders = (id) => {
 
     let cancel = document.querySelector(".order-cancel");
     cancel.addEventListener("click", () => {
-      db.doc(`users/${user.uid}`).collection("orders").doc(`${id}`).delete();
+      db.doc(`users/${user.email}`).collection("orders").doc(`${id}`).delete();
       M.toast({ html: "Order has been cancelled" });
     });
   } else {

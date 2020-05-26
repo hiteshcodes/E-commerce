@@ -24,9 +24,8 @@ const proceedPayment = () => {
     } else {
       // No user is signed in.
     }
-    console.log(user.uid);
 
-    db.doc(`users/${user.uid}`)
+    db.doc(`users/${user.email}`)
       .collection("userAddressInfo")
       .doc()
       .set({
@@ -42,12 +41,9 @@ const proceedPayment = () => {
         console.log("location reload");
       });
     // save orders from cart info to new document
-
     var user = firebase.auth().currentUser;
-
     console.log(user.uid);
-    let userDoc = db.doc(`users/${user.uid}`);
-
+    let userDoc = db.doc(`users/${user.email}`);
     userDoc
       .collection("usercart")
       .get()
@@ -75,8 +71,7 @@ firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     // User logged in already or has just logged in.
     // console.log(user.uid);
-
-    db.doc(`users/${user.uid}`)
+    db.doc(`users/${user.email}`)
       .collection("usercart")
       .onSnapshot((snapshot) => {
         // console.log(snapshot.docs);
