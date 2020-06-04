@@ -38,30 +38,33 @@
                 <li>
                     <a href="accessories.html">Accessories</a>
                 </li>
+                <li>
+                    <form action="" class="search-mobile-form">
+                        <div class="search-div">
+                            <img src="img/icons/search.svg" class="search-icon" alt="search-icon" width="30px">
+                            <input type="text" class="search-mobile" placeholder="Search by brand">
+                            <img src="img/icons/x.svg" class="close-icon close" alt="close-icon" width="30px">
+                        </div>
+                    </form>
+                </li>
             </ul>
-
             <ul class="right">
                 <ul class="guides" style="border: none;">
-                    <li class="admin" style="display : none" ;>
-                        <a href="dashboard.html" class="modal-trigger" data-target="">
-                            <i class="large material-icons">assessment</i>
-                        </a>
-                    </li>
                     <li class="logged-in" style="display : none" ;>
                         <a href="#" class="modal-trigger tooltipped" data-target="modal-account" data-position="bottom"
                             data-tooltip="Account">
-                            <i class="large material-icons">account_box</i>
+                            <img src="img/icons//user.svg" class="user-icons" alt="">
                         </a>
                     </li>
                     <li class="logged-in" style="display : none" ;>
                         <a href="#" class="tooltipped" id="logout" data-position="bottom" data-tooltip="Logout">
-                            <i class="large material-icons">logout</i>
+                            <img src="img/icons//log-out.svg" class="user-icons" alt="">
                         </a>
                     </li>
                     <li class="logged-in" style="display : none" ;>
                         <a href="#" class="modal-trigger tooltipped" data-target="modal-create" id="cart"
                             data-position="bottom" data-tooltip="Cart">
-                            <i class="large material-icons">shopping_cart</i>
+                            <img src="img/icons/shopping-cart.svg" class="user-icons" alt="">
                         </a>
                     </li>
                     <li class="logged-out" style="display : none" ;>
@@ -72,17 +75,18 @@
                             data-target="modal-signup">Sign
                             up</a>
                     </li>
-                    </span>
                 </ul>
             </ul>
-
         </div>
     </nav>
+
     <ul class="sidenav center" id="mobile-demo">
+
         <li><a href="index.html">Home</a></li>
         <li><a href="mobilePhones.html">Mobile</a></li>
         <li><a href="accessories.html">Accessories</a></li>
     </ul>
+
     <main id="mobilePhones-main">
         <div id="modal-signup" class="modal modal-fixed-footer">
             <div class="modal-content">
@@ -194,16 +198,7 @@
                         </thead>
                         <tbody class="cartWrapper"></tbody>
                         <tr class="bottom-table">
-                            <td></td>
-                            <td style="text-align: center;">
-                                <h6>Total Price :</h6>
-                            </td>
-                            <td>
-                                <h6 class="total-price-count"></h6>
-                            </td>
-                            <td>
-                                <a href="checkout.html" class="btn-checkout btn">Checkout</a>
-                            </td>
+                            <!-- <td></td> -->
                         </tr>
                     </table>
                 </div>
@@ -213,14 +208,20 @@
                     <a href="index.html" class="btn">Shop Now</a>
                 </div>
             </div>
+            <div class="modal-footer show-cart"
+                style="display: flex; justify-content: space-evenly; margin: 10px 0px; display: none;">
+                <h6>Total Price :</h6>
+                <h6 class="total-price-count"></h6>
+                <a href="checkout.html" class="btn-checkout btn">Checkout</a>
+            </div>
         </div>
         <!-- here are the products content  -->
         <div id="mobiles">
             <h5 class="center">MOBILE PHONES</h5>
             <div class="row">
-                <div class="col l12 m12 s12">
-                    <nav class="search-nav search-content" style="background-color: #e7eef8 !important;">
-                        <div class="nav-wrapper" style="border-radius: 50px;">
+                <div class="col l6 m12 s12">
+                    <!-- <nav class="search-nav search-content" style="background-color: #e7eef8 !important;"> -->
+                    <!-- <div class="nav-wrapper" style="border-radius: 50px;">
                             <form class="search-mobile-form" autocomplete="off" style="border-radius: 50px;">
                                 <div class="input-field search-field">
                                     <input id="" class="search-mobile" type="search">
@@ -230,8 +231,15 @@
                                 </div>
 
                             </form>
+                        </div> -->
+                    <!-- </nav> -->
+                    <!-- <form action="" class="search-mobile form">
+                        <div class="search-div">
+                            <i class="material-icons search-icon">search</i>
+                            <input type="text">
+                            <i class="material-icons close-icon">close</i>
                         </div>
-                    </nav>
+                    </form> -->
                 </div>
             </div>
             <div class="mobilePhonesWrapper row">

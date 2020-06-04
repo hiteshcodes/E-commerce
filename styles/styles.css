@@ -11,9 +11,12 @@
 /* root color  */
 
 :root {
-  --nav-footer: #3c303e;
+  /* --nav-footer: #3c303e;
   --body-bg: #dddddd;
-  --btn: #3c303e;
+  --btn: #3c303e; */
+  --nav-footer: #1b6ca8;
+  --body-bg: #fce8d5;
+  --btn: #1b6ca8;
 }
 body {
   /* font-family: "Poppins", sans-serif; */
@@ -26,31 +29,65 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-#header {
+/* #header {
   background: #fb7f64;
   height: 30px;
   width: 100%;
   margin: auto;
-}
+} */
 
 .nav-wrapper {
   background: var(--nav-footer);
   margin: auto;
 }
-
 .brand-logo {
   left: 6%;
   font-family: "DM Mono", monospace;
   font-weight: 700;
 }
 .right {
-  margin-right: 40px;
+  margin: 0 40px 0 0;
+}
+.right img{
+  margin-top: 20px;
 }
 .sidenav li {
   justify-content: space-evenly;
   margin-top: 20px;
 }
-
+/* search bar */
+.search-div {
+  display: flex;
+  border-radius: 10px;
+  border: 2px solid #dddddd4b;
+  height: 50px;
+}
+.search-mobile-form {
+  position: absolute;
+  width: 40%;
+  top: 5px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.search-div input {
+  border-bottom: none !important;
+  color: white;
+}
+.search-div input[type="text"]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.close-icon,
+.search-icon {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px !important;
+  height: 50px;
+}
 .tooltip {
   position: relative;
   display: inline-block;
@@ -249,15 +286,6 @@ textarea:-webkit-autofill:active {
   padding: 1rem;
 }
 
-.search-nav,
-.search-mobile:focus {
-  border-radius: 50px !important;
-  width: 90%;
-  height: 60px;
-}
-.search-content {
-  margin: 20px auto;
-}
 .card {
   text-align: left;
   background: var(--body-bg) !important;
@@ -271,7 +299,6 @@ textarea:-webkit-autofill:active {
 .card:hover {
   transform: scale(1.0223);
 }
-
 .card-content {
   margin: 0px !important;
   font-size: xx-small !important;
@@ -283,7 +310,10 @@ textarea:-webkit-autofill:active {
   margin: 10px;
   height: 250px !important;
 }
-
+.cart-icon{
+  width: 20px;
+  margin-top: 8px;
+}
 .three-dots {
   bottom: 28px !important;
   position: relative;
@@ -304,8 +334,11 @@ textarea:-webkit-autofill:active {
 
 .material-icons {
   cursor: pointer;
+  margin: 0;
 }
-
+.btn-add-to-cart{
+  font-weight: 600 !important;
+}
 footer {
   background: var(--nav-footer) !important;
 }
@@ -342,8 +375,14 @@ footer a:hover {
 }
 
 @media all and (max-width: 500px) {
+  p{
+    font-size: 16px;
+  }
   .brand-logo {
-    margin-left: -100px !important;
+    /* margin-left: -130px !important; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .right {
     margin-right: 0px;

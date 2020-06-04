@@ -88,19 +88,15 @@ const fetchCart = (data) => {
   } else {
     // No user is signed in.
   }
-
   // console.log(user);
-
   let html = "";
   let totalPrice = Number(0);
   if (data.length === 0) {
-    console.log("no cart");
     document.querySelector(".hide-cart").style.display = "block";
     document.querySelector(".show-cart").style.display = "none";
   } else {
     document.querySelector(".show-cart").style.display = "block";
     document.querySelector(".hide-cart").style.display = "none";
-    console.log("cart");
     data.forEach((doc) => {
       const cart = doc.data();
 

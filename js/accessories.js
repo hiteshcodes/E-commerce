@@ -20,7 +20,7 @@ const fetchAccessories = (data) => {
     <div class="card-content">
           <span class="cad-title activator black-text text-darken-1"><h6>${accessories.name}</h6><i class="material-icons three-dots right">more_vert</i></span>
           <h6>₹. ${accessories.price}</h6>
-          <p><button class="btn" type="submit" name="action" onClick="addToCart('${accessories.name}','${accessories.price}', '${accessories.image}')">Add to cart
+          <p><button class="btn btn-add-to-cart" type="submit" name="action" onClick="addToCart('${accessories.name}','${accessories.price}', '${accessories.image}')">Add to cart
           <i class="material-icons right">shopping_cart</i>
           </button></p>
           </div>

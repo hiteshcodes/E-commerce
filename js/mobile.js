@@ -89,7 +89,6 @@ function addToCart(name, price, image) {
 const mobileForm = document.querySelector(".search-mobile-form");
 mobileForm.addEventListener("submit", (e) => {
   e.preventDefault();
-
   let mobileSearch = document.querySelector(".search-mobile").value;
   let searchToLowerCase = mobileSearch.toLowerCase();
   db.collection("mobilePhones")
@@ -97,7 +96,7 @@ mobileForm.addEventListener("submit", (e) => {
     .onSnapshot((snapshot) => {
       fetchMobilePhones(snapshot.docs);
     });
-
+  
   // ---------------fetch products(mobilePhones) from databse ---------------
   const mobilePhonesContainer = document.querySelector(".mobilePhonesWrapper");
   const fetchMobilePhones = (data) => {
