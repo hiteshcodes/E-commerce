@@ -1,9 +1,7 @@
-
 //get accessories doc from db
 db.collection("accessories").onSnapshot((snapshot) => {
   fetchAccessories(snapshot.docs);
 });
-
 
 // --------------------fetch accessories from backend --------------------
 const accessoriesContainer = document.querySelector(".accessoriesWrapper");
@@ -20,9 +18,9 @@ const fetchAccessories = (data) => {
     <div class="card-content">
           <span class="cad-title activator black-text text-darken-1"><h6>${accessories.name}</h6><i class="material-icons three-dots right">more_vert</i></span>
           <h6>₹. ${accessories.price}</h6>
-          <p><button class="btn btn-add-to-cart" type="submit" name="action" onClick="addToCart('${accessories.name}','${accessories.price}', '${accessories.image}')">Add to cart
+          <button class="btn btn-add-to-cart" type="submit" name="action" onClick="addToCart('${accessories.name}','${accessories.price}', '${accessories.image}')">Add to cart
           <i class="material-icons right">shopping_cart</i>
-          </button></p>
+          </button>
           </div>
       <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">Specs<i class="material-icons right">close</i></span>
@@ -39,7 +37,6 @@ const fetchAccessories = (data) => {
 
   accessoriesContainer.innerHTML = html;
 };
-
 
 // --------------------add to cart from frontend--------------------
 function addToCart(name, price, image) {

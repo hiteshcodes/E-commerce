@@ -8,12 +8,12 @@
 
   <link rel="icon" href="img/loop-removebg-preview.png" />
 
-  <link type="text/css" rel="stylesheet" href="styles/styles.css" />
-
   <link type="text/css" rel="stylesheet" href="styles/sliderstyle.css" />
-
+  
   <!-- materialize CSS -->
   <link rel="stylesheet" href="styles/materialize.css" />
+  
+  <link type="text/css" rel="stylesheet" href="styles/styles.css" />
 
   <!-- material-icons -->
   <link rel="stylesheet" href="styles/materializecssicons.css" />
@@ -23,7 +23,9 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <!-- font awesome icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 </head>
 
 <body>
@@ -47,18 +49,18 @@
           <li class="logged-in" style="display : none" ;>
             <a href="#" class="modal-trigger tooltipped" data-target="modal-account" data-position="bottom"
               data-tooltip="Account">
-              <img src="img/icons//user.svg" class="user-icons " alt="">
+              <i class="material-icons">account_circle</i>
             </a>
           </li>
           <li class="logged-in" style="display : none" ;>
             <a href="#" class="tooltipped" id="logout" data-position="bottom" data-tooltip="Logout">
-              <img src="img/icons//log-out.svg" class="user-icons" alt="">
+              <i class="material-icons">logout</i>
             </a>
           </li>
           <li class="logged-in" style="display : none" ;>
-            <a href="#" class="modal-trigger tooltipped" data-target="modal-create" id="cart" data-position="bottom"
+            <a href="#" class="modal-trigger tooltipped" data-target="modal-cart" id="cart" data-position="bottom"
               data-tooltip="Cart">
-              <img src="img/icons/shopping-cart.svg" class="user-icons" alt="">
+              <i class="material-icons">shopping_cart</i>
             </a>
           </li>
           <li class="logged-out" style="display : none" ;>
@@ -172,7 +174,7 @@
       </div>
     </div>
 
-    <div id="modal-create" class="modal modal-fixed-footer">
+    <div id="modal-cart" class="modal modal-fixed-footer">
       <div class="modal-content">
         <div class="show-cart" style="display: none;">
           <h6 class="modal-heading">Your Shopping Cart</h6>
@@ -224,12 +226,12 @@
       <img src="img/highlight/samsunggalaxynote10.png" alt="mobile-highlight" data-aos="fade-left"
         data-aos-duration="2500" />
       <div class="highlight-heading">
-        <h6>Samsung Note 10</h6>
+        <h5>Samsung Note 10</h5>
       </div>
     </div>
     <div class="highlight1">
       <div class="highlight-heading">
-        <h6>OnePlus 7t Pro</h6>
+        <h5>OnePlus 7t Pro</h5>
         <p>Lead with speed</p>
       </div>
       <img src="img/highlight/oneplus7tpro.png" alt="mobile-highlight" data-aos="fade-right" data-aos-duration="2500" />
