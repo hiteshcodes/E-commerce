@@ -14,6 +14,7 @@ const fetchMobilePhones = (data) => {
   data.map((doc) => {
     const mobilePhones = doc.data();
     const li = `
+    <div class="mobile">
     <div class="card">
       <div class="card-image waves-effect waves-block waves-light">
         <img class="activator" src="${mobilePhones.image}">
@@ -21,7 +22,7 @@ const fetchMobilePhones = (data) => {
       <div class="card-content">
           <span class="card-title activator black-text text-darken-1"><h6>${mobilePhones.name}</h6><i class="material-icons three-dots right">more_vert</i></span>
            <h6>₹. ${mobilePhones.price}</h6>
-          <button class="btn " type="submit" name="action" onClick="addToCart('${mobilePhones.name}','${mobilePhones.price}', '${mobilePhones.image}')">Add to cart
+          <button class="btn btn-add-to-cart" type="submit" name="action" onClick="addToCart('${mobilePhones.name}','${mobilePhones.price}', '${mobilePhones.image}')">Add to cart
           <i class="material-icons right">shopping_cart</i>
           </button>
       </div>
@@ -41,6 +42,8 @@ const fetchMobilePhones = (data) => {
              <li>${mobilePhones.battery}</li>
       </div>
     </div>
+    </div>
+
         `;
 
     html += li;
@@ -96,7 +99,7 @@ mobileForm.addEventListener("submit", (e) => {
     .onSnapshot((snapshot) => {
       fetchMobilePhones(snapshot.docs);
     });
-  
+
   // ---------------fetch products(mobilePhones) from databse ---------------
   const mobilePhonesContainer = document.querySelector(".mobilePhonesWrapper");
   const fetchMobilePhones = (data) => {
@@ -104,6 +107,7 @@ mobileForm.addEventListener("submit", (e) => {
     data.map((doc) => {
       const mobilePhones = doc.data();
       const li = `
+      <div class="mobile">
     <div class="card">
       <div class="card-image waves-effect waves-block waves-light">
         <img class="activator" src="${mobilePhones.image}">
@@ -128,6 +132,7 @@ mobileForm.addEventListener("submit", (e) => {
              <label>Battery:</label>
              <li>${mobilePhones.battery}</li>
       </div>
+    </div>
     </div>
         `;
 

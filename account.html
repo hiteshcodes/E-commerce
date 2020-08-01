@@ -48,27 +48,28 @@
                     <li class="logged-in" style="display : none" ;>
                         <a href="#" class="modal-trigger tooltipped" data-target="modal-account" data-position="bottom"
                             data-tooltip="Account">
-                        <i class="material-icons">account_circle</i>
+                            <i class="material-icons">account_circle</i>
                         </a>
                     </li>
                     <li class="logged-in" style="display : none" ;>
                         <a href="#" class="tooltipped" id="logout" data-position="bottom" data-tooltip="Logout">
-                        <i class="material-icons">logout</i>
+                            <i class="material-icons">logout</i>
                         </a>
                     </li>
                     <li class="logged-in" style="display : none" ;>
-                        <a href="#" class="modal-trigger tooltipped" data-target="modal-create" id="cart" data-position="bottom"
-                            data-tooltip="Cart">
-                        <i class="material-icons">shopping_cart</i>
+                        <a href="#" class="modal-trigger tooltipped" data-target="modal-cart" id="cart"
+                            data-position="bottom" data-tooltip="Cart">
+                            <i class="material-icons">shopping_cart</i>
                         </a>
                     </li>
                     <li class="logged-out" style="display : none" ;>
                         <a href="#" class="modal-trigger btn white black-text" data-target="modal-login">Login</a>
                     </li>
-                    <li class="logged-out" style="display : none" ;>
-                        <a style="border: 1px solid white;" href="#" class="modal-trigger btn" data-target="modal-signup">Sign
+                    <!-- <li class="logged-out" style="display : none" ;>
+                        <a style="border: 1px solid white;" href="#" class="modal-trigger btn"
+                            data-target="modal-signup">Sign
                             up</a>
-                    </li>
+                    </li> -->
                 </ul>
             </ul>
 
@@ -81,8 +82,56 @@
     </ul>
 
     <main id="account-main">
-        <div id="modal-signup" class="modal modal-fixed-footer">
-            <div class="modal-content">
+        <div id="modal-login" class="modal modal-fixed-footer">
+            <div class="modal-content signin-content">
+                <form id="login-form">
+                    <h4 class="modal-heading">Login</h4>
+                    <br />
+                    <div class="input-field">
+                        <input type="email" id="login-email" autocomplete="off" required />
+                        <label for="login-email">Email address</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="login-password" autocomplete="off" required />
+                        <label for="login-password">Your password</label>
+                    </div>
+                    <p>
+                        <a href="#" class="blue-grey-text forget-pass" onclick="forgetpass()">Forget Password?</a>
+                    </p>
+                    <small class="signin-error center-align errors"></small>
+                    <br />
+                    <div class="progress login-progress" style="background: none !important; visibility: hidden;">
+                        <div class="indeterminate blue darken-3"></div>
+                    </div>
+                    <button class="btn z-depth-0 submit-btn"><i class="material-icons">arrow_forward</i></button>
+                    <p>
+                        <a href="#" class="blue-grey-text forget-pass" onclick="newUser()">New User? Sign-up</a>
+                    </p>
+                </form>
+                <form class="reset-form" style="display: none;">
+                    <div class="forget-password-content">
+                        <h6>We will send an email will password reset link.</h6>
+                        <br />
+                        <div class="input-field">
+                            <input type="email" class="femail" />
+                            <label for="forget-email">Email address</label>
+                        </div>
+                        <small class="errors forget-password-error"></small> <br />
+                        <button href="" class="btn submit-btn"><i class="material-icons">arrow_forward</i></button>
+                    </div>
+                    <h4 style="display: none;" class="forget-password-success">
+                        Email sent! Check your inbox
+                    </h4>
+                    <div>
+                        <blockquote>
+                            <a href="#" onclick="backToLogin()">back to Login</a>
+                        </blockquote>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Sign up modal -->
+            <div class="modal-content signup-content" style="display: none;">
                 <h4 class="modal-heading">Sign up</h4>
                 <br />
                 <form id="signup-form">
@@ -111,76 +160,30 @@
                     <div class="progress signup-progress" style="background: none !important; visibility: hidden;">
                         <div class="indeterminate blue darken-3"></div>
                     </div>
-                    <button class="btn z-depth-0">Sign up</button>
-                </form>
-            </div>
-        </div>
-
-        <div id="modal-login" class="modal modal-fixed-footer">
-            <div class="modal-content">
-                <form id="login-form">
-                    <h4 class="modal-heading">Login</h4>
-                    <br />
-                    <div class="input-field">
-                        <input type="email" id="login-email" autocomplete="off" required />
-                        <label for="login-email">Email address</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" id="login-password" autocomplete="off" required />
-                        <label for="login-password">Your password</label>
-                    </div>
+                    <button class="btn z-depth-0 submit-btn"><i class="material-icons">arrow_forward</i></button>
                     <p>
-                        <a href="#" class="blue-grey-text forget-pass" onclick="forgetpass()">Forget Password?</a>
+                        <a href="#" class="blue-grey-text forget-pass" onclick="oldUser()">Already a User? Sign-in</a>
                     </p>
-                    <small class="signin-error center-align errors"></small>
-                    <br />
-                    <div class="progress login-progress" style="background: none !important; visibility: hidden;">
-                        <div class="indeterminate blue darken-3"></div>
-                    </div>
-                    <button class="btn z-depth-0">Login</button>
-                </form>
-                <form class="reset-form" style="display: none;">
-                    <div class="forget-password-content">
-                        <h6>We will send an email will password reset link.</h6>
-                        <br />
-                        <div class="input-field">
-                            <input type="email" class="femail" />
-                            <label for="forget-email">Email address</label>
-                        </div>
-                        <small class="errors forget-password-error"></small> <br />
-                        <button href="" class="btn">submit</button>
-                    </div>
-                    <h4 style="display: none;" class="forget-password-success">
-                        Email sent! Check your inbox
-                    </h4>
-                    <div>
-                        <blockquote>
-                            <a href="#" onclick="backToLogin()">back to Login</a>
-                        </blockquote>
-                    </div>
                 </form>
             </div>
         </div>
 
-        <div id="modal-account" class="modal">
+        <div id="modal-account" class="modal center-align">
             <div class="modal-content center-align">
                 <h4 class="modal-heading">Account</h4>
                 <div class="row">
-                    <div class="col l12">
-                        <hr style="margin: 10px 0px;" />
-                        <div class="account-details"></div>
-                    </div>
-                    <p><a href="account.html">More</a></p>
+                    <p class="account-details"></p>
+                    <a href="account.html">More</a>
                 </div>
             </div>
         </div>
 
-        <div id="modal-create" class="modal modal-fixed-footer">
+        <div id="modal-cart" class="modal modal-fixed-footer">
             <div class="modal-content">
                 <div class="show-cart" style="display: none;">
                     <h6 class="modal-heading">Your Shopping Cart</h6>
                     <br />
-                    <table class="center">
+                    <table class="centered">
                         <thead>
                             <tr>
                                 <th>Item</th>
@@ -199,7 +202,7 @@
                                 <h6 class="total-price-count"></h6>
                             </td>
                             <td>
-                                <a href="checkout.html" class="btn-checkout btn">Checkout</a>
+                                <a href="checkout.html" class="btn-checkout btn z-depth-0">Checkout</a>
                             </td>
                         </tr>
                     </table>
@@ -211,58 +214,12 @@
                 </div>
             </div>
         </div>
-        <div class="container center">
-            <h4>Manage your account</h4>
-            <div class="row">
-                <div class="col l4 m12 s12 account-profile">
-                    <h5>Personal Info</h5>
-                    <div class="account-profile-div">
-                        <img class="profile-pic"
-                            src="https://firebasestorage.googleapis.com/v0/b/ecommerce-f108f.appspot.com/o/avatar.png?alt=media&token=5be0ee8e-bb1c-408d-bfbc-071aa4ec9ffd"
-                            alt="">
-                        <table class="centered">
-                            <tbody>
-                                <tr>
-                                    <td>Email: </td>
-                                    <td class="account-email"></td>
-                                </tr>
-                                <tr>
-                                    <td>Phone: </td>
-                                    <td class="account-phone"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="col l7 m12 s12 account-order">
-                    <h5>Your Orders</h5>
-                    <div class="account-order-div" style="display: none;">
-                        <table class="centered">
-                            <thead>
-                                <tr>
-                                    <th>Order</th>
-                                    <th>Order Id</th>
-                                    <th>Control</th>
-                                </tr>
-                            </thead>
-                            <tbody class="account-orders-table">
-                                
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="account-no-orders" style="display: none;">
-                        <h6 class="account-no-orders-heading" style="font-weight: bold;">You Dont have any orders
-                        </h6>
-                    </div>
-                </div>
 
-            </div>
-        </div>
         <!-- order cancellation modal -->
         <div id="modal1" class="modal modal-fixed-footer">
             <div class="modal-content">
                 <div class="row">
-                    <h4>Order Cancel Confirmation</h4>
+                    <h6>Order Cancel Confirmation</h6>
                     <div class="col l12">
                         <h5>Privacy Policy</h5>
                         <p>Privacy policies are mandated by law in many countries and they're also a great way to
@@ -276,8 +233,62 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat order-cancel">Proced with
+                <a href="#!" class="btn red white-text modal-close waves-effect waves-green btn-flat order-cancel">Proced with
                     Cancellation</a>
+            </div>
+        </div>
+
+
+        <div class="account-order-detail" style="display: none">
+
+        </div>
+        <div id="account-default">
+            <div class="container center">
+                <h4>Manage your account</h4>
+                <div class="row">
+                    <div class="col l4 m12 s12 account-profile">
+                        <h5>Personal Info</h5>
+                        <div class="account-profile-div">
+                            <img class="profile-pic"
+                                src="https://firebasestorage.googleapis.com/v0/b/ecommerce-f108f.appspot.com/o/avatar.png?alt=media&token=5be0ee8e-bb1c-408d-bfbc-071aa4ec9ffd"
+                                alt="">
+                            <table class="centered">
+                                <tbody>
+                                    <tr>
+                                        <td>Email: </td>
+                                        <td class="account-email"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Phone: </td>
+                                        <td class="account-phone"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col l7 m12 s12 account-order">
+                        <h5>Your Orders</h5>
+                        <div class="account-order-div" style="display: none;">
+                            <table class="centered">
+                                <thead>
+                                    <tr>
+                                        <th>Order</th>
+                                        <th>Order Id</th>
+                                        <th>Control</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="account-orders-table">
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="account-no-orders" style="display: none;">
+                            <h6 class="account-no-orders-heading" style="font-weight: bold;">You Dont have any orders
+                            </h6>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </main>
@@ -291,7 +302,7 @@
                     <p class="footer-phone"></p>
                 </div>
                 <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Reac Us</h5>
+                    <h5 class="white-text">Reach Us</h5>
                     <a class="grey-text text-lighten-3" target="_blank" href="https://www.facebook.com/"><i
                             class="fa fa-facebook"></i></a>
                     <a class="grey-text text-lighten-3" target="_blank" href="https://www.instagram.com/"><i

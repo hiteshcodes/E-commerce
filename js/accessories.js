@@ -11,6 +11,7 @@ const fetchAccessories = (data) => {
   data.forEach((doc) => {
     const accessories = doc.data();
     const li = `
+    <div class="mobile">
     <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
     <img class="activator" src="${accessories.image}">
@@ -29,8 +30,9 @@ const fetchAccessories = (data) => {
              <label>Description:</label>
              <li>${accessories.description}</li>
           </div>
-        </div>
-        `;
+          </div>
+          </div>
+          `;
 
     html += li;
   });

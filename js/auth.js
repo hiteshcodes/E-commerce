@@ -154,7 +154,7 @@ signupForm.addEventListener("submit", (e) => {
         db.doc(`users/${email}`).set(credentials);
       })
       .then((c) => {
-        const modal = document.querySelector("#modal-signup");
+        const modal = document.querySelector("#modal-login");
         M.Modal.getInstance(modal).close();
         signupForm.reset();
         signupForm.querySelector(".signup-error").innerHTML = "";
@@ -248,7 +248,16 @@ function backToLogin() {
   document.querySelector(".forget-password-success").style.display = "none";
   document.querySelector(".forget-password-content").style.display = "block";
 }
-
+// switch to signup from login
+const newUser = () => {
+  document.querySelector(".signin-content").style.display = "none"
+  document.querySelector(".signup-content").style.display = "block"
+}
+// switch to signin from signup
+const oldUser = () => {
+  document.querySelector(".signin-content").style.display = "block"
+  document.querySelector(".signup-content").style.display = "none"
+}
 // function reset() password {}
 let resetForm = document.querySelector(".reset-form");
 resetForm.addEventListener("click", (e) => {
