@@ -3,6 +3,7 @@
 auth.onAuthStateChanged((user) => {
   if (user) {
     setupUI(user);
+    console.log(user);
   } else setupUI();
   // fetchMobilePhones([]);
   // fetchAccessories([]);
@@ -139,20 +140,25 @@ signupForm.addEventListener("submit", (e) => {
   } else {
     // signup the user and add firestore data
     document.querySelector(".signup-progress").style.visibility = "visible";
-    auth
+
+    auth // we'll get the email and password from input fields
       .createUserWithEmailAndPassword(email, password)
       .then((data) => {
-        // console.log('dtd', data)
+        // we will need this uid to specify every user
         return data.user.uid;
       })
       .then((uid) => {
+        // this credentials object will be save in users/${user email}
         const credentials = {
           email,
           uid,
           phone,
         };
+
+        // call the reference to the doc and set the credentials object to users/email/
         db.doc(`users/${email}`).set(credentials);
       })
+
       .then((c) => {
         const modal = document.querySelector("#modal-login");
         M.Modal.getInstance(modal).close();
@@ -250,14 +256,14 @@ function backToLogin() {
 }
 // switch to signup from login
 const newUser = () => {
-  document.querySelector(".signin-content").style.display = "none"
-  document.querySelector(".signup-content").style.display = "block"
-}
+  document.querySelector(".signin-content").style.display = "none";
+  document.querySelector(".signup-content").style.display = "block";
+};
 // switch to signin from signup
 const oldUser = () => {
-  document.querySelector(".signin-content").style.display = "block"
-  document.querySelector(".signup-content").style.display = "none"
-}
+  document.querySelector(".signin-content").style.display = "block";
+  document.querySelector(".signup-content").style.display = "none";
+};
 // function reset() password {}
 let resetForm = document.querySelector(".reset-form");
 resetForm.addEventListener("click", (e) => {

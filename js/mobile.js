@@ -5,7 +5,7 @@ db.collection("mobilePhones")
   .onSnapshot((snapshot) => {
     fetchMobilePhones(snapshot.docs);
   });
-
+  
 // ---------------fetch products(mobilePhones) from databse ---------------
 
 const mobilePhonesContainer = document.querySelector(".mobilePhonesWrapper");
