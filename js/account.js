@@ -9,6 +9,7 @@ firebase.auth().onAuthStateChanged((user) => {
   } else {
   }
 });
+
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     db.doc(`users/${user.email}`)
