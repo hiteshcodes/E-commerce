@@ -21,7 +21,7 @@
 /* root color  */
 :root {
   --nav-footer: #464646;
-  --body-bg: #f4f4f4;
+  --body-bg: #f9fcfb;
   --btn: #ece66c;
   --btn-text: #ece66c;
 }
@@ -272,7 +272,7 @@ textarea:-webkit-autofill:active {
   display: flex;
   text-align: center;
   font-size: 14px;
-  margin: 20px auto;
+  margin: 30px auto;
 }
 
 .article-card {
@@ -355,6 +355,7 @@ textarea:-webkit-autofill:active {
 }
 footer {
   background: var(--nav-footer) !important;
+  margin-top: 20px;
 }
 footer p {
   font-size: 14px;

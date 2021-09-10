@@ -288,6 +288,7 @@ resetForm.addEventListener("click", (e) => {
       });
   }
 });
+
 // scripts for navbar
 document.addEventListener("DOMContentLoaded", function () {
   var elems = document.querySelectorAll(".sidenav");
