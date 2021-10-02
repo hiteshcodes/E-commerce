@@ -1,302 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>loop</title>
 
-    <link rel="icon" href="img/loop-removebg-preview.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>loop</title>
 
-    <link type="text/css" rel="stylesheet" href="styles/sliderstyle.css" />
+  <link rel="icon" href="img/loop-removebg-preview.png" />
 
-    <!-- materialize CSS -->
-    <link rel="stylesheet" href="styles/materialize.css" />
+  <link type="text/css" rel="stylesheet" href="styles/sliderstyle.css" />
 
-    <link type="text/css" rel="stylesheet" href="styles/styles.css" />
+  <!-- materialize CSS -->
+  <link rel="stylesheet" href="styles/materialize.css" />
 
-    <!-- material-icons -->
-    <link rel="stylesheet" href="styles/materializecssicons.css" />
+  <link type="text/css" rel="stylesheet" href="styles/styles.css" />
 
-    <!-- Compiled and minified JavaScript for Animation on Scroll-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- material-icons -->
+  <link rel="stylesheet" href="styles/materializecssicons.css" />
 
-    <!-- font awesome icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <!-- 
+  <!-- Compiled and minified JavaScript for Animation on Scroll-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- font awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- 
 
   <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script> -->
-  </head>
+</head>
 
-  <body>
-    <nav id="nav">
-      <div class="nav-wrapper">
-        <a href="index.html" class="brand-logo">loop</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
-          ><i class="material-icons">menu</i></a
-        >
-        <ul class="container center hide-on-med-and-down">
-          <li>
-            <a href="index.html">Home</a>
+<body>
+  <nav id="nav">
+    <div class="nav-wrapper">
+      <a href="index.html" class="brand-logo">loop</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="container center hide-on-med-and-down">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="mobilePhones.html">Mobiles</a>
+        </li>
+        <li>
+          <a href="accessories.html">Accessories</a>
+        </li>
+      </ul>
+      <ul class="right">
+        <ul class="guides" style="border: none">
+          <li class="logged-in" style="display: none" ;>
+            <a href="#" class="modal-trigger tooltipped" data-target="modal-account" data-position="bottom"
+              data-tooltip="Account">
+              <i class="material-icons">account_circle</i>
+            </a>
           </li>
-          <li>
-            <a href="mobilePhones.html">Mobiles</a>
+          <li class="logged-in" style="display: none" ;>
+            <a href="#" class="tooltipped" id="logout" data-position="bottom" data-tooltip="Logout">
+              <i class="material-icons">logout</i>
+            </a>
           </li>
-          <li>
-            <a href="accessories.html">Accessories</a>
+          <li class="logged-in" style="display: none" ;>
+            <a href="#" class="modal-trigger tooltipped" data-target="modal-cart" id="cart" data-position="bottom"
+              data-tooltip="Cart">
+              <i class="material-icons">shopping_cart</i>
+            </a>
           </li>
-        </ul>
-        <ul class="right">
-          <ul class="guides" style="border: none">
-            <li class="logged-in" style="display: none" ;>
-              <a
-                href="#"
-                class="modal-trigger tooltipped"
-                data-target="modal-account"
-                data-position="bottom"
-                data-tooltip="Account"
-              >
-                <i class="material-icons">account_circle</i>
-              </a>
-            </li>
-            <li class="logged-in" style="display: none" ;>
-              <a
-                href="#"
-                class="tooltipped"
-                id="logout"
-                data-position="bottom"
-                data-tooltip="Logout"
-              >
-                <i class="material-icons">logout</i>
-              </a>
-            </li>
-            <li class="logged-in" style="display: none" ;>
-              <a
-                href="#"
-                class="modal-trigger tooltipped"
-                data-target="modal-cart"
-                id="cart"
-                data-position="bottom"
-                data-tooltip="Cart"
-              >
-                <i class="material-icons">shopping_cart</i>
-              </a>
-            </li>
-            <li class="logged-out" style="display: none" ;>
-              <a
-                href="#"
-                class="modal-trigger btn black-text"
-                data-target="modal-login"
-                >Login</a
-              >
-            </li>
-            <!-- <li class="logged-out" style="display : none" ;>
+          <li class="logged-out" style="display: none" ;>
+            <a href="#" class="modal-trigger btn black-text" data-target="modal-login">Login</a>
+          </li>
+          <!-- <li class="logged-out" style="display : none" ;>
             <a style="border: 1px solid white;" href="#" class="modal-trigger btn" data-target="modal-signup">Sign
               up</a>
           </li> -->
-          </ul>
         </ul>
-      </div>
-    </nav>
-    <ul class="sidenav center" id="mobile-demo">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="mobilePhones.html">Mobile</a></li>
-      <li><a href="accessories.html">Accessories</a></li>
-    </ul>
-    <main id="main">
-      <div id="modal-login" class="modal modal-fixed-footer">
-        <div class="modal-content signin-content">
-          <form id="login-form">
-            <h4 class="modal-heading">Login</h4>
-            <br />
-            <div class="input-field">
-              <input
-                type="email"
-                id="login-email"
-                autocomplete="off"
-                required
-              />
-              <label for="login-email">Email address</label>
-            </div>
-            <div class="input-field">
-              <input
-                type="password"
-                id="login-password"
-                autocomplete="off"
-                required
-              />
-              <label for="login-password">Your password</label>
-            </div>
-            <p>
-              <a
-                href="#"
-                class="blue-grey-text forget-pass"
-                onclick="forgetpass()"
-                >Forget Password?</a
-              >
-            </p>
-            <small class="signin-error center-align errors"></small>
-            <br />
-            <div
-              class="progress login-progress"
-              style="background: none !important; visibility: hidden"
-            >
-              <div class="indeterminate blue darken-3"></div>
-            </div>
-            <button class="btn z-depth-0 submit-btn">
-              <i class="material-icons">arrow_forward</i>
-            </button>
-            <p>
-              <a href="#" class="blue-grey-text forget-pass" onclick="newUser()"
-                >New User? Sign-up</a
-              >
-            </p>
-          </form>
-          <form class="reset-form" style="display: none">
-            <div class="forget-password-content">
-              <h6>We will send an email will password reset link.</h6>
-              <br />
-              <div class="input-field">
-                <input type="email" class="femail" />
-                <label for="forget-email">Email address</label>
-              </div>
-              <small class="errors forget-password-error"></small> <br />
-              <button href="" class="btn submit-btn z-depth-0">
-                <i class="material-icons">arrow_forward</i>
-              </button>
-            </div>
-            <h4 style="display: none" class="forget-password-success">
-              Email sent! Check your inbox
-            </h4>
-            <div>
-              <blockquote>
-                <a href="#" onclick="backToLogin()">back to Login</a>
-              </blockquote>
-            </div>
-          </form>
-        </div>
-
-        <!-- Sign up modal -->
-        <div class="modal-content signup-content" style="display: none">
-          <h4 class="modal-heading">Sign up</h4>
+      </ul>
+    </div>
+  </nav>
+  <ul class="sidenav center" id="mobile-demo">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="mobilePhones.html">Mobile</a></li>
+    <li><a href="accessories.html">Accessories</a></li>
+  </ul>
+  <main id="main">
+    <div id="modal-login" class="modal modal-fixed-footer">
+      <div class="modal-content signin-content">
+        <form id="login-form">
+          <h4 class="modal-heading">Login</h4>
           <br />
-          <form id="signup-form">
-            <div class="input-field">
-              <input
-                type="email"
-                id="signup-email"
-                autocomplete="off"
-                required
-              />
-              <label for="signup-email">Email address</label>
-              <small class="errors email-error"></small>
-            </div>
-            <div class="input-field">
-              <input type="password" id="signup-password" required />
-              <label for="signup-password">Choose password</label>
-              <small class="errors password-error"></small>
-            </div>
-            <div class="input-field">
-              <input type="password" id="signup-password-repeat" required />
-              <label for="signup-password-repeat">Repeat password</label>
-              <small class="errors password-error"></small>
-            </div>
-            <div class="input-field">
-              <input type="tel" id="signup-phone" required />
-              <label for="signup-phone">Phone</label>
-              <small class="errors password-error"></small>
-            </div>
-            <small class="signup-error center-align errors"></small>
+          <div class="input-field">
+            <input type="email" id="login-email" autocomplete="off" required />
+            <label for="login-email">Email address</label>
+          </div>
+          <div class="input-field">
+            <input type="password" id="login-password" autocomplete="off" required />
+            <label for="login-password">Your password</label>
+          </div>
+          <p>
+            <a href="#" class="blue-grey-text forget-pass" onclick="forgetpass()">Forget Password?</a>
+          </p>
+          <small class="signin-error center-align errors"></small>
+          <br />
+          <div class="progress login-progress" style="background: none !important; visibility: hidden">
+            <div class="indeterminate blue darken-3"></div>
+          </div>
+          <button class="btn z-depth-0 submit-btn">
+            <i class="material-icons">arrow_forward</i>
+          </button>
+          <p>
+            <a href="#" class="blue-grey-text forget-pass" onclick="newUser()">New User? Sign-up</a>
+          </p>
+        </form>
+        <form class="reset-form" style="display: none">
+          <div class="forget-password-content">
+            <h6>We will send an email will password reset link.</h6>
             <br />
-            <div
-              class="progress signup-progress"
-              style="background: none !important; visibility: hidden"
-            >
-              <div class="indeterminate blue darken-3"></div>
+            <div class="input-field">
+              <input type="email" class="femail" />
+              <label for="forget-email">Email address</label>
             </div>
-            <button class="btn z-depth-0 submit-btn">
+            <small class="errors forget-password-error"></small> <br />
+            <button href="" class="btn submit-btn z-depth-0">
               <i class="material-icons">arrow_forward</i>
             </button>
-            <p>
-              <a href="#" class="blue-grey-text forget-pass" onclick="oldUser()"
-                >Already a User? Sign-in</a
-              >
-            </p>
-          </form>
-        </div>
-      </div>
-
-      <div id="modal-account" class="modal center-align">
-        <div class="modal-content center-align">
-          <h4 class="modal-heading">Account</h4>
-          <div class="row">
-            <p class="account-details"></p>
-            <a href="account.html">More</a>
           </div>
-        </div>
+          <h4 style="display: none" class="forget-password-success">
+            Email sent! Check your inbox
+          </h4>
+          <div>
+            <blockquote>
+              <a href="#" onclick="backToLogin()">back to Login</a>
+            </blockquote>
+          </div>
+        </form>
       </div>
 
-      <div id="modal-cart" class="modal modal-fixed-footer">
-        <div class="modal-content">
-          <div class="show-cart" style="display: none">
-            <h6 class="modal-heading">Your Shopping Cart</h6>
-            <br />
-            <table class="centered">
-              <thead>
-                <tr>
-                  <th>Item</th>
-                  <th>Name</th>
-                  <th>Remove</th>
-                  <th>Price</th>
-                </tr>
-              </thead>
-              <tbody class="cartWrapper"></tbody>
-              <tr class="bottom-table">
-                <td></td>
-                <td style="text-align: center">
-                  <h6>Total Price :</h6>
-                </td>
-                <td>
-                  <h6 class="total-price-count"></h6>
-                </td>
-                <td>
-                  <a href="checkout.html" class="btn-checkout btn z-depth-0"
-                    >Checkout</a
-                  >
-                </td>
+      <!-- Sign up modal -->
+      <div class="modal-content signup-content" style="display: none">
+        <h4 class="modal-heading">Sign up</h4>
+        <br />
+        <form id="signup-form">
+          <div class="input-field">
+            <input type="email" id="signup-email" autocomplete="off" required />
+            <label for="signup-email">Email address</label>
+            <small class="errors email-error"></small>
+          </div>
+          <div class="input-field">
+            <input type="password" id="signup-password" required />
+            <label for="signup-password">Choose password</label>
+            <small class="errors password-error"></small>
+          </div>
+          <div class="input-field">
+            <input type="password" id="signup-password-repeat" required />
+            <label for="signup-password-repeat">Repeat password</label>
+            <small class="errors password-error"></small>
+          </div>
+          <div class="input-field">
+            <input type="tel" id="signup-phone" required />
+            <label for="signup-phone">Phone</label>
+            <small class="errors password-error"></small>
+          </div>
+          <small class="signup-error center-align errors"></small>
+          <br />
+          <div class="progress signup-progress" style="background: none !important; visibility: hidden">
+            <div class="indeterminate blue darken-3"></div>
+          </div>
+          <button class="btn z-depth-0 submit-btn">
+            <i class="material-icons">arrow_forward</i>
+          </button>
+          <p>
+            <a href="#" class="blue-grey-text forget-pass" onclick="oldUser()">Already a User? Sign-in</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <div id="modal-account" class="modal center-align">
+      <div class="modal-content center-align">
+        <h4 class="modal-heading">Account</h4>
+        <div class="row">
+          <p class="account-details"></p>
+          <a href="account.html">More</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-cart" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <div class="show-cart" style="display: none">
+          <h6 class="modal-heading">Your Shopping Cart</h6>
+          <br />
+          <table class="centered">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Name</th>
+                <th>Remove</th>
+                <th>Price</th>
               </tr>
-            </table>
-          </div>
-          <div class="hide-cart center" style="display: none">
-            <h5>Your Shopping Cart is Empty</h5>
-            <img src="img/empty-cart.jpg" alt="empty-cart" /> <br />
-            <a href="index.html" class="btn">Shop Now</a>
-          </div>
+            </thead>
+            <tbody class="cartWrapper"></tbody>
+            <tr class="bottom-table">
+              <td></td>
+              <td style="text-align: center">
+                <h6>Total Price :</h6>
+              </td>
+              <td>
+                <h6 class="total-price-count"></h6>
+              </td>
+              <td>
+                <a href="checkout.html" class="btn-checkout btn z-depth-0">Checkout</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="hide-cart center" style="display: none">
+          <h5>Your Shopping Cart is Empty</h5>
+          <img src="img/empty-cart.jpg" alt="empty-cart" /> <br />
+          <a href="index.html" class="btn">Shop Now</a>
         </div>
       </div>
-      <section>
-        <div id="slider">
-          <figure>
-            <a href="mobilePhones.html"
-              ><img src="img/sliders/oneplus8proslide.PNG" alt="Slider"
-            /></a>
-            <a href="mobilePhones.html"
-              ><img src="img/sliders/realme6.PNG" alt="Slider"
-            /></a>
-            <a href="mobilePhones.html"
-              ><img src="img/sliders/redmi9pro.PNG" alt="Slider"
-            /></a>
-            <a href="mobilePhones.html"
-              ><img src="img/sliders/samsungs20.PNG" alt="Slider"
-            /></a>
-          </figure>
-        </div>
-      </section>
-    </main>
-    <!-- <section id="highlight-section">
+    </div>
+    <section>
+      <div id="slider">
+        <figure>
+          <a href="mobilePhones.html"><img src="img/sliders/oneplus8proslide.PNG" alt="Slider" /></a>
+          <a href="mobilePhones.html"><img src="img/sliders/realme6.PNG" alt="Slider" /></a>
+          <a href="mobilePhones.html"><img src="img/sliders/redmi9pro.PNG" alt="Slider" /></a>
+          <a href="mobilePhones.html"><img src="img/sliders/samsungs20.PNG" alt="Slider" /></a>
+        </figure>
+      </div>
+    </section>
+  </main>
+  <!-- <section id="highlight-section">
     <div class="highlight1">
       <img src="img/highlight/samsunggalaxynote10.png" alt="mobile-highlight" data-aos="fade-left"
         data-aos-duration="2500" />
@@ -312,184 +246,148 @@
       <img src="img/highlight/oneplus7tpro.png" alt="mobile-highlight" data-aos="fade-right" data-aos-duration="2500" />
     </div>
   </section> -->
-    <main id="grids-main">
-      <h5>Hot Accessories</h5>
-      <hr class="grids-main-hr" />
-      <div class="accessories-highlight-main">
-        <div class="row">
-          <div class="col l3 m4 s6" data-aos="zoom-in" data-aos-duration="1000">
+  <main id="grids-main">
+    <h5>Hot Accessories</h5>
+    <hr class="grids-main-hr" />
+    <div class="accessories-highlight-main">
+      <div class="row">
+        <div class="col l3 m4 s6" data-aos="zoom-in" data-aos-duration="1000">
+          <a href="accessories.html">
+            <img src="resources/bluetoothecho.png" class="accessories-highlights" alt="" />
+          </a>
+        </div>
+        <div class="col l3 m4 s6" data-aos="zoom-in" data-aos-duration="1000">
+          <a href="accessories.html">
+            <img src="resources/earphone.png" class="accessories-highlights" alt="" />
+          </a>
+        </div>
+        <div class="col l6 m12 s12" data-aos="zoom-in" data-aos-duration="1000">
+          <a href="accessories.html">
+            <img src="resources/mibandedit.png" class="accessories-highlights" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col l4 m4 s6" data-aos="zoom-in" data-aos-duration="1000">
+          <a href="accessories.html">
+            <img src="resources/headphone2.png" class="accessories-highlights" alt="" />
+          </a>
+        </div>
+        <div class="col l6 m12 s6" data-aos="zoom-in" data-aos-duration="1000">
+          <a href="accessories.html">
+            <img src="resources/realmebuds.PNG" class="accessories-highlights" alt="" />
+          </a>
+        </div>
+        <div class="col l2 s12" data-aos="zoom-in" data-aos-duration="1000">
+          <div class="browse-more">
+            <h5>Browse more</h5>
             <a href="accessories.html">
-              <img
-                src="resources/bluetoothecho.png"
-                class="accessories-highlights"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="col l3 m4 s6" data-aos="zoom-in" data-aos-duration="1000">
-            <a href="accessories.html">
-              <img
-                src="resources/earphone.png"
-                class="accessories-highlights"
-                alt=""
-              />
-            </a>
-          </div>
-          <div
-            class="col l6 m12 s12"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-          >
-            <a href="accessories.html">
-              <img
-                src="resources/mibandedit.png"
-                class="accessories-highlights"
-                alt=""
-              />
+              <img src="img/icons/right-arrow.png" class="accessories-highlights" alt="" />
             </a>
           </div>
         </div>
-        <div class="row">
-          <div class="col l4 m4 s6" data-aos="zoom-in" data-aos-duration="1000">
-            <a href="accessories.html">
-              <img
-                src="resources/headphone2.png"
-                class="accessories-highlights"
-                alt=""
-              />
-            </a>
-          </div>
-          <div
-            class="col l6 m12 s6"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-          >
-            <a href="accessories.html">
-              <img
-                src="resources/realmebuds.PNG"
-                class="accessories-highlights"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="col l2 s12" data-aos="zoom-in" data-aos-duration="1000">
-            <div class="browse-more">
-              <h5>Browse more</h5>
-              <a href="accessories.html">
-                <img
-                  src="img/icons/right-arrow.png"
-                  class="accessories-highlights"
-                  alt=""
-                />
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
-    </main>
-    <hr />
-    <article id="article">
-      <div class="article-card">
-        <img src="img/icons/free-delivery.png" alt="" />
-        <p>Free Shipping</p>
-      </div>
-      <div class="vertical"></div>
-      <div class="article-card">
-        <img src="img/icons/buy.png" alt="" />
-        <p>Cash On Delivery</p>
-      </div>
-      <div class="vertical"></div>
-      <div class="article-card">
-        <img src="img/icons/online-support.png" alt="" />
-        <p>Support 24/7</p>
-      </div>
-      <div class="vertical"></div>
-      <div class="article-card">
-        <img src="img/icons/pay.png" alt="" />
-        <p>Secure Payment</p>
-      </div>
-    </article>
-    <hr />
+    </div>
+  </main>
+  <hr />
+  <article id="article">
+    <div class="article-card">
+      <img src="img/icons/free-delivery.png" alt="" />
+      <p>Free Shipping</p>
+    </div>
+    <div class="vertical"></div>
+    <div class="article-card">
+      <img src="img/icons/buy.png" alt="" />
+      <p>Cash On Delivery</p>
+    </div>
+    <div class="vertical"></div>
+    <div class="article-card">
+      <img src="img/icons/online-support.png" alt="" />
+      <p>Support 24/7</p>
+    </div>
+    <div class="vertical"></div>
+    <div class="article-card">
+      <img src="img/icons/pay.png" alt="" />
+      <p>Secure Payment</p>
+    </div>
+  </article>
+  <hr />
 
-    <footer class="page-footer">
+  <section style="margin:50px auto;">
+    <center style="padding: 20px auto;">
+      <h5>Offers and More</h5>
+    </center>
+    <hr>
+    <p>
+      <a href="https://www.amazon.in/dp/B077S5CVBQ/?ref=assoc_tag_sept19?actioncode=AINOTH066082819002X&tag=hitesh0d1c-21"
+        target="_blank"><img class="d-block" width="100%" src="./img/more/Amazon_Audible_1068x260.jpg" alt=""></a>
+    </p>
+  </section>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Contact Us</h5>
+          <p class="grey-text text-lighten-4 footer-address"></p>
+          <p class="footer-phone"></p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Reach us at</h5>
+          <a class="grey-text text-lighten-3" target="_blank" href="https://www.facebook.com/"><i
+              class="fa fa-facebook"></i></a>
+          <a class="grey-text text-lighten-3" target="_blank" href="https://www.instagram.com/"><i
+              class="fa fa-instagram"></i></a>
+          <a class="grey-text text-lighten-3" target="_blank" href="https://www.twitter.com/"><i
+              class="fa fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
       <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Contact Us</h5>
-            <p class="grey-text text-lighten-4 footer-address"></p>
-            <p class="footer-phone"></p>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Reach us at</h5>
-            <a
-              class="grey-text text-lighten-3"
-              target="_blank"
-              href="https://www.facebook.com/"
-              ><i class="fa fa-facebook"></i
-            ></a>
-            <a
-              class="grey-text text-lighten-3"
-              target="_blank"
-              href="https://www.instagram.com/"
-              ><i class="fa fa-instagram"></i
-            ></a>
-            <a
-              class="grey-text text-lighten-3"
-              target="_blank"
-              href="https://www.twitter.com/"
-              ><i class="fa fa-twitter"></i
-            ></a>
-          </div>
-        </div>
+        <a href="https://hiteshbhargav.github.io/portfolio/" target="_blank">Made by Hitesh Bhargav</a>
+        <a class="grey-text text-lighten-4 right" href="#!">service@varient.com</a>
       </div>
-      <div class="footer-copyright">
-        <div class="container">
-          <a href="https://hiteshbhargav.github.io/portfolio/" target="_blank"
-            >Made by Hitesh Bhargav</a
-          >
-          <a class="grey-text text-lighten-4 right" href="#!"
-            >service@varient.com</a
-          >
-        </div>
-      </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script>
-      AOS.init({});
-    </script>
+  <script>
+    AOS.init({});
+  </script>
 
-    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-functions.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-functions.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
 
-    <script>
-      var firebaseConfig = {
-        apiKey: "AIzaSyCqv05eagwoCTjHiUVWLmTzHl-dDh2X5hI",
-        authDomain: "ecommerce-f108f.firebaseapp.com",
-        databaseURL: "https://ecommerce-f108f.firebaseio.com",
-        projectId: "ecommerce-f108f",
-        storageBucket: "ecommerce-f108f.appspot.com",
-        messagingSenderId: "351954540442",
-        appId: "1:351954540442:web:2f34e401f4a9bb70c34c23",
-        measurementId: "G-DZDK7934TE",
-      };
-      firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyCqv05eagwoCTjHiUVWLmTzHl-dDh2X5hI",
+      authDomain: "ecommerce-f108f.firebaseapp.com",
+      databaseURL: "https://ecommerce-f108f.firebaseio.com",
+      projectId: "ecommerce-f108f",
+      storageBucket: "ecommerce-f108f.appspot.com",
+      messagingSenderId: "351954540442",
+      appId: "1:351954540442:web:2f34e401f4a9bb70c34c23",
+      measurementId: "G-DZDK7934TE",
+    };
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
 
-      const auth = firebase.auth();
-      const db = firebase.firestore();
-      const functions = firebase.functions();
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    const functions = firebase.functions();
 
-      console.log(firebase.analytics());
-    </script>
+    console.log(firebase.analytics());
+  </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="js/auth.js"></script>
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+
 </html>
