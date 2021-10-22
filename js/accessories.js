@@ -71,7 +71,6 @@ function addToCart(name, price, image) {
           })
           .then(() => {
             M.toast({ html: "Item added to your cart" });
-            // location.reload();
           });
       }
     });

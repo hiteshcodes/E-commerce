@@ -3,7 +3,7 @@
 auth.onAuthStateChanged((user) => {
   if (user) {
     setupUI(user);
-    console.log(user);
+    // console.log(user);
   } else setupUI();
   // fetchMobilePhones([]);
   // fetchAccessories([]);
@@ -47,9 +47,8 @@ function removeItem(name, useruid, price) {
   var row = del.parentNode.parentNode;
   row.parentNode.removeChild(row);
   totalPriceAfterRemoveITem -= price;
-  document.querySelector(
-    ".total-price-count"
-  ).innerHTML = totalPriceAfterRemoveITem;
+  document.querySelector(".total-price-count").innerHTML =
+    totalPriceAfterRemoveITem;
 }
 
 //change ui on auth
