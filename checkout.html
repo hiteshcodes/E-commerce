@@ -8,20 +8,22 @@
 
     <link rel="icon" href="img/loop-removebg-preview.png">
 
-    
+
     <!-- materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    
+
     <!-- materialize icons -->
     <link rel="stylesheet" href="styles/materializecssicons.css">
-    
+
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    
+
     <!-- font awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <link rel="stylesheet" href="styles/styles.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZDK7934TE"></script>
+    <script async src="./gtag.js"></script>
 </head>
 
 <body>
@@ -41,34 +43,34 @@
                     <a href="accessories.html">Accessories</a>
                 </li>
             </ul>
-        <ul class="right">
-            <ul class="guides" style="border: none;">
-                <li class="logged-in" style="display : none" ;>
-                    <a href="#" class="modal-trigger tooltipped" data-target="modal-account" data-position="bottom"
-                        data-tooltip="Account">
-                    <i class="material-icons">account_circle</i>
-                    </a>
-                </li>
-                <li class="logged-in" style="display : none" ;>
-                    <a href="#" class="tooltipped" id="logout" data-position="bottom" data-tooltip="Logout">
-                    <i class="material-icons">logout</i>
-                    </a>
-                </li>
-                <li class="logged-in" style="display : none" ;>
-                    <a href="#" class="modal-trigger tooltipped" data-target="modal-create" id="cart" data-position="bottom"
-                        data-tooltip="Cart">
-                    <i class="material-icons">shopping_cart</i>
-                    </a>
-                </li>
-                <li class="logged-out" style="display : none" ;>
-                    <a href="#" class="modal-trigger btn white black-text" data-target="modal-login">Login</a>
-                </li>
-                <!-- <li class="logged-out" style="display : none" ;>
+            <ul class="right">
+                <ul class="guides" style="border: none;">
+                    <li class="logged-in" style="display : none" ;>
+                        <a href="#" class="modal-trigger tooltipped" data-target="modal-account" data-position="bottom"
+                            data-tooltip="Account">
+                            <i class="material-icons">account_circle</i>
+                        </a>
+                    </li>
+                    <li class="logged-in" style="display : none" ;>
+                        <a href="#" class="tooltipped" id="logout" data-position="bottom" data-tooltip="Logout">
+                            <i class="material-icons">logout</i>
+                        </a>
+                    </li>
+                    <li class="logged-in" style="display : none" ;>
+                        <a href="#" class="modal-trigger tooltipped" data-target="modal-create" id="cart"
+                            data-position="bottom" data-tooltip="Cart">
+                            <i class="material-icons">shopping_cart</i>
+                        </a>
+                    </li>
+                    <li class="logged-out" style="display : none" ;>
+                        <a href="#" class="modal-trigger btn white black-text" data-target="modal-login">Login</a>
+                    </li>
+                    <!-- <li class="logged-out" style="display : none" ;>
                     <a style="border: 1px solid white;" href="#" class="modal-trigger btn" data-target="modal-signup">Sign
                         up</a>
                 </li> -->
+                </ul>
             </ul>
-        </ul>
 
         </div>
     </nav>
@@ -125,7 +127,7 @@
                     </div>
                 </form>
             </div>
-        
+
             <!-- Sign up modal -->
             <div class="modal-content signup-content" style="display: none;">
                 <h4 class="modal-heading">Sign up</h4>
@@ -165,15 +167,15 @@
         </div>
 
         <!-- account MODAL -->
-    <div id="modal-account" class="modal center-align">
-        <div class="modal-content center-align">
-            <h4 class="modal-heading">Account</h4>
-            <div class="row">
-                <p class="account-details"></p>
-                <a href="account.html">More</a>
+        <div id="modal-account" class="modal center-align">
+            <div class="modal-content center-align">
+                <h4 class="modal-heading">Account</h4>
+                <div class="row">
+                    <p class="account-details"></p>
+                    <a href="account.html">More</a>
+                </div>
             </div>
         </div>
-    </div>
 
         <!-- CHECKOUT CART MODAL -->
         <div id="modal-cart" class="modal modal-fixed-footer">
@@ -316,46 +318,30 @@
     </section>
     </main>
     <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Contact Us</h5>
-            <p class="grey-text text-lighten-4 footer-address"></p>
-            <p class="footer-phone"></p>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Reach us at</h5>
-            <a
-              class="grey-text text-lighten-3"
-              target="_blank"
-              href="https://www.facebook.com/"
-              ><i class="fa fa-facebook"></i
-            ></a>
-            <a
-              class="grey-text text-lighten-3"
-              target="_blank"
-              href="https://www.instagram.com/"
-              ><i class="fa fa-instagram"></i
-            ></a>
-            <a
-              class="grey-text text-lighten-3"
-              target="_blank"
-              href="https://www.twitter.com/"
-              ><i class="fa fa-twitter"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
         <div class="container">
-          <a href="https://hiteshbhargav.github.io/portfolio/" target="_blank"
-            >Made by Hitesh Bhargav</a
-          >
-          <a class="grey-text text-lighten-4 right" href="#!"
-            >service@varient.com</a
-          >
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Contact Us</h5>
+                    <p class="grey-text text-lighten-4 footer-address"></p>
+                    <p class="footer-phone"></p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Reach us at</h5>
+                    <a class="grey-text text-lighten-3" target="_blank" href="https://www.facebook.com/"><i
+                            class="fa fa-facebook"></i></a>
+                    <a class="grey-text text-lighten-3" target="_blank" href="https://www.instagram.com/"><i
+                            class="fa fa-instagram"></i></a>
+                    <a class="grey-text text-lighten-3" target="_blank" href="https://www.twitter.com/"><i
+                            class="fa fa-twitter"></i></a>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <a href="https://hiteshbhargav.github.io/portfolio/" target="_blank">Made by Hitesh Bhargav</a>
+                <a class="grey-text text-lighten-4 right" href="#!">service@varient.com</a>
+            </div>
+        </div>
     </footer>
     <!-- firebase configs -->
     <!-- The core Firebase JS SDK is always requi  and must be listed first -->
